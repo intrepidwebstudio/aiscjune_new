@@ -1,0 +1,3166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile Application</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile.iscrollview.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile.iscrollview-pull.css">	  
+
+
+<link rel="stylesheet" href="css/custom1.css" />
+<link rel="stylesheet" href="css/responsiveslides.css" />
+	<script> 
+	document.onreadystatechange = function(e)
+	{
+		if (document.readyState === 'complete')
+		{
+			
+			
+			}
+	};
+   </script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="childbrowser.js"></script>
+
+
+<style>
+
+
+
+
+		.example-wrapper, .example-wrapper div.iscroll-scroller {
+		width: 100% !important;
+		}
+.homeheader1{
+	
+	font-family:Arial, Helvetica, sans-serif !important;
+	
+	}
+	
+	
+	.ui-listview > li p.list {
+	font-size: 0.95em !important;
+	font-weight: normal;
+	display: block !important;
+	margin: 0.6em 0 !important;
+	
+}
+
+
+ul li.eventlist{
+	padding:0em 1em !important;
+	}
+	
+
+	
+	
+
+ @media only screen and (min-device-width: 320px) and (min-device-height: 480px) {
+	
+	/* Home */
+		.plusicon{
+	
+			position:absolute; vertical-align:middle; right:4% !important; top:18% !important;	
+			padding:5px !important;
+		}
+
+	
+	.backbutton12{
+		left: 10px !important;
+		position: relative !important;
+		top: 23% !important;
+		width: 21% !important;
+		padding:6px !important;
+		padding-right:6px !important;
+		padding-left:6px !important;
+	}	
+			.backbutton{
+		width:70% !important;
+		
+		}
+
+
+	.custheight{
+		height:55px !important;;
+		}
+	
+.newslettericons
+{
+background:url(img1/cbg@2x.png) !important; background-size:contain !important; background-repeat:repeat-x !important; height:65px !important;
+}		
+.newslettericons img
+{
+width:20% !important;	
+}	
+.newslettericons p{
+margin-top:10px !important; 
+font-size: 0.85em !important;   
+}	
+
+	
+	
+	.sliderres{
+		height:141px !important;
+		}
+	
+.homeheader1{
+		background-color:#38549B;
+		color:white;
+		padding:14px;
+	}
+	.homeimage1{
+		max-height:145px !important; 
+		min-height:145px !important;
+		width:100% !important;
+	}
+	.homeimage{
+		max-height:70px !important; 
+		min-height:70px !important;
+		width:100% !important;
+	
+	}
+	.ui-content{
+		padding:0px !important;
+	}
+	
+	.homefooter{
+	
+		width:100% !important;
+		min-height:47px !important;
+		max-height:47px !important;
+	
+	}
+	
+	.yellowtext1{
+		width:100%;
+		background-color:#E9A802;
+		height:29px;
+	}
+	.yellowimage1{
+		padding:4px;
+		height:20px;
+	}
+	.yellowcontent1{
+		color:#000;
+		padding:4px;
+		float:right;
+	}
+	/* Eventpage */
+	.eventtop1{
+		width:100%; 
+		float:left;
+		background-color:#38549B;
+		color:white; 
+		min-height:48px;
+	}
+	.eventtopimage11{
+		margin-top:10px;
+		width:28%;
+		margin-left:6px;
+	}
+	.eventtoptext1{
+		margin-top:-27px;
+		margin-left:51px;
+	}
+	.eventtopimage22{
+	
+		margin-left: -6px;
+		margin-top: 7px;
+		width: 75%;
+	}
+	.eventcontenttext1{
+		font-size:13px;
+		text-align:center;
+		
+		}
+	
+	/* Contacts,socialmedia,newsletter,locate us, notification header CSS */
+	.schoolheadertop{
+		background-color:#38549B;
+		height:48px;
+		}
+	.schoolheaderimage{
+		width:28px;
+		position:absolute;
+		margin-top:10px;
+	}
+	.schoolheadertext1{
+		margin-top:-33px;
+		margin-left:40px;
+		color:white;
+	}
+	.schoolheadertext2{
+		text-align:center;
+		margin-top:-24px;
+		color:white;
+		font-size:20px;
+	}
+	/* Contacts */
+	.contactsmain{
+		 height:52px;
+		 background-color:#D2D5D7;
+		 margin-right:7px;
+		 margin-top:18px;
+		 margin-left:7px;
+		 text-align:center;
+		 border-radius:2px;
+	  }
+	.contactsimagetop{
+		height:75px;
+		background-color:#D2D5D7;
+		margin-right:0px;
+		margin-top:11px;
+		margin-left:0px;
+		border-radius:2px;
+	}
+	.contactsimagetop1{
+		 height:75px;
+		 background-color:#D2D5D7;
+		 margin-right:7px;
+		 margin-top:30px;
+		 margin-left:7px;
+		 border-radius:2px;
+	}
+	.contactsimage{
+		width:100%;
+		height:100%;
+		margin-top:5px;
+		margin-left:7px; 
+		 border-radius: 50%;
+	
+}
+	
+	/* Social Media */
+	.socialmediamain{
+		width:100%;
+	}
+	.socialmediaimage1{
+		margin-top:10px;
+		}
+	/* LocateUs */
+	locatecontentlabel{
+		width:75%;
+		margin-top:80px;
+	}
+	loctecontenttext1{
+		margin-left:46px;
+		margin-right:46px;
+		margin-top:60px;
+	}
+	locatecontenttext2{
+		float:left;
+		margin-top:-21px;
+		margin-left:-8px;
+	}
+	locatecontentimage{
+		width:19px;
+		margin-left:10px;
+		margin-top:-4px;
+	}
+	locatepara{
+		margin-top:20px;
+	}
+	rrrr{
+		margin-top:10% !important;
+		
+	}
+
+}
+
+@media  (min-device-width: 320px) and (min-device-height: 568px){
+	
+	/* Home */
+	
+		.plusicon{
+	
+			position:absolute; vertical-align:middle; right:4% !important; top:18% !important;	
+			padding:5px !important;
+		
+		}
+
+	
+	.backbutton12{
+		left: 10px !important;
+		position: relative !important;
+		top: 23% !important;
+		width: 21% !important;
+		padding:6px !important;
+		padding-right:6px !important;
+		padding-left:6px !important;
+	}	
+			.backbutton{
+		width:70% !important;
+		
+		}
+
+
+	
+	.custheight{
+		height:60px !important;;
+		}
+		
+		
+.newslettericons
+{
+background:url(img1/cbg@2x.png) !important; background-size:contain !important; background-repeat:repeat-x !important; height:65px !important;
+}		
+.newslettericons img
+{
+width:20% !important;	
+}	
+.newslettericons p{
+margin-top:10px !important; 
+font-size: 0.85em !important;   
+}	
+
+	
+	
+	.sliderres{
+	
+		height:224px !important;
+		
+		}
+	
+	.homeheader1{
+		background-color:#38549B;
+		color:white;
+		padding-top:18px;
+		padding-bottom:16px;
+	}
+	.homeimage1{
+	
+		max-height:225px !important; 
+		min-height:225px !important;
+		width:100% !important;
+	
+	}
+	.homeimage{
+	
+		max-height:69px !important; 
+		min-height:69px !important;
+		width:100% !important;
+	
+	}
+	.ui-content{
+		padding:0px !important;
+	}
+	
+	.homefooter{
+	
+		width:100% !important;
+		min-height:53px !important;
+		max-height:53px !important;
+	
+	}
+	
+	.yellowtext1{
+		width:100%;
+		background-color:#E9A802;
+		height:32px;
+	}
+	.yellowimage1{
+		padding:6px;
+		height:20px;
+	}
+	.yellowcontent1{
+		color:#000;
+		padding:4px;
+		float:right;
+	}
+	/* Eventpage */
+	.eventtop1{
+		width:100%; 
+		float:left;
+		background-color:#38549B;
+		color:white; 
+		min-height:53px;
+	}
+	.eventtopimage11{
+		margin-top:10px;
+		width:30%;
+		margin-left:6px;
+	}
+	.eventtoptext1{
+		margin-top:-27px;
+		margin-left:51px;
+	}
+	.eventtopimage22{
+	
+		margin-left: -6px;
+		margin-top: 7px;
+		width: 80%;
+	}
+	.eventcontenttext1{
+		font-size:13px;
+		text-align:center;
+		
+		}
+	
+	/* Contacts,socialmedia,newsletter,locate us, notification header CSS */
+	.schoolheadertop{
+		background-color:#38549B;
+		height:53px;
+		}
+	.schoolheaderimage{
+		width:9%;
+		position:absolute;
+		margin-top:11px;
+	}
+	.schoolheadertext1{
+		margin-top:-37px;
+		margin-left:40px;
+		color:white;
+	}
+	.schoolheadertext2{
+		text-align:center;
+		margin-top:-24px;
+		color:white;
+		font-size:22px;
+	}
+	/* Contacts */
+	.contactsmain{
+		 height:52px;
+		 background-color:#D2D5D7;
+		 margin-right:7px;
+		 margin-top:20px;
+		 margin-left:7px;
+		 text-align:center;
+		 border-radius:2px;
+	  }
+	.contactsimagetop{
+		height:75px;
+		background-color:#D2D5D7;
+		margin-right:0px;
+		margin-top:11px;
+		margin-left:0px;
+		border-radius:2px;
+	}
+	.contactsimagetop1{
+		 height:75px;
+		 background-color:#D2D5D7;
+		 margin-right:7px;
+		 margin-top:30px;
+		 margin-left:7px;
+		 border-radius:2px;
+	}
+	.contactsimage{
+			width:100%;
+		height:100%;
+		margin-top:5px;
+		margin-left:7px; 
+		 border-radius: 50%;
+	}
+	/* Social Media */
+	.socialmediamain{
+		width:100%;
+	}
+	.socialmediaimage1{
+		margin-top:12px;
+		}
+	/* LocateUs */
+	locatecontentlabel{
+		width:75%;
+		margin-top:80px;
+	}
+	loctecontenttext1{
+		margin-left:46px;
+		margin-right:46px;
+		margin-top:60px;
+	}
+	locatecontenttext2{
+		float:left;
+		margin-top:-21px;
+		margin-left:-8px;
+	}
+	locatecontentimage{
+		width:19px;
+		margin-left:10px;
+		margin-top:-4px;
+	}
+	locateconentpara{
+		margin-top:25px;
+	}
+	rrrr{
+		margin-top:10% !important;
+		
+	}
+
+}
+
+@media (min-device-width: 375px) and (min-device-height: 667px){
+	/* Home */
+	
+		.plusicon{
+	
+			position:absolute; vertical-align:middle; right:4% !important; top:17% !important;	
+			padding:5px !important;
+		
+		}
+
+	.backbutton12{
+		left: 10px !important;
+		position: relative !important;
+		top: 23% !important;
+		width: 21% !important;
+		padding:6px !important;
+		padding-right:6px !important;
+		padding-left:6px !important;
+	}	
+			.backbutton{
+		width:70% !important;
+		
+		}
+
+
+	.custheight{
+		height:60px !important;;
+		}
+	
+	
+.newslettericons
+{
+background:url(img1/cbg@2x.png) !important; background-size:contain !important; background-repeat:repeat-x !important; height:72px !important;
+}		
+.newslettericons img
+{
+width:20% !important;	
+}	
+.newslettericons p{
+margin-top:10px !important; 
+font-size: 0.85em !important;   
+padding-left:10px !important;
+}	
+
+	
+	.sliderres{
+	
+		height:323px !important;
+		
+		}
+	
+	
+	
+	.homeheader1{
+		background-color:#38549B;
+		color:white;
+		padding:14px;
+		font-size:24px;
+	}
+	.homeimage1{
+	
+		max-height:223px !important; 
+		min-height:223px !important;
+		width:100% !important;
+	
+	}
+	.homeimage{
+	
+		max-height:95px !important; 
+		min-height:95px !important;
+		width:100% !important;
+	
+	}
+	.ui-content{
+		padding:0px !important;
+	}
+	
+	.homefooter{
+	
+		width:100% !important;
+		min-height:60px !important;
+		max-height:60px !important;
+	
+	}
+	
+	.yellowtext1{
+		width:100%;
+		background-color:#E9A802;
+		height:40px;
+	}
+	.yellowimage1{
+		padding:4px;
+		height:32px;
+	}
+	.yellowcontent1{
+		color:#000;
+		padding:9px;
+		float:right;
+	}
+	/* Eventpage */
+	.eventtop1{
+		width:100%; 
+		float:left;
+		background-color:#38549B;
+		color:white; 
+		min-height:60px;
+	}
+	.eventtopimage11{
+		margin-top:13px;
+		width:35%;
+		margin-left:6px;
+	}
+	.eventtoptext1{
+		margin-top:-31px;
+		margin-left:51px;
+		font-size:19px;
+	}
+	.eventtopimage22{
+	
+		margin-left: -6px;
+		margin-top: 13px;
+		width: 85%;
+	}
+	.eventcontenttext1{
+		font-size:13px;
+		text-align:center;
+		
+		}
+	
+	/* Contacts,socialmedia,newsletter,locate us, notification header CSS */
+	.schoolheadertop{
+		background-color:#38549B;
+		height:60px;
+		}
+	.schoolheaderimage{
+		width:10%;
+		position:absolute;
+		margin-top:11px;
+	}
+	.schoolheadertext1{
+		margin-top:-40px;
+		margin-left:46px;
+		color:white;
+		font-size:19px;
+	}
+	.schoolheadertext2{
+		text-align:center;
+		margin-top:-28px;
+		color:white;
+		font-size:24px;
+	}
+	/* Contacts */
+	.contactsmain{
+		 height:52px;
+		 background-color:#D2D5D7;
+		 margin-right:7px;
+		 margin-top:22px;
+		 margin-left:7px;
+		 text-align:center;
+		 border-radius:2px;
+	  }
+	.contactsimagetop{
+		height:75px;
+		background-color:#D2D5D7;
+		margin-right:0px;
+		margin-top:11px;
+		margin-left:0px;
+		border-radius:2px;
+	}
+	.contactsimagetop1{
+		 height:75px;
+		 background-color:#D2D5D7;
+		 margin-right:7px;
+		 margin-top:30px;
+		 margin-left:7px;
+		 border-radius:2px;
+	}
+	.contactsimage{
+			width:100%;
+		height:100%;
+		margin-top:5px;
+		margin-left:7px; 
+		 border-radius: 50%;
+	}
+	/* Social Media */
+	.socialmediamain{
+		width:100%;
+	}
+	.socialmediaimage1{
+		margin-top:13px;
+		}
+	/* LocateUs */
+	locatecontentlabel{
+		width:75%;
+		margin-top:80px;
+	}
+	loctecontenttext1{
+		margin-left:46px;
+		margin-right:46px;
+		margin-top:60px;
+	}
+	locatecontenttext2{
+		float:left;
+		margin-top:-21px;
+		margin-left:-8px;
+	}
+	locatecontentimage{
+		width:19px;
+		margin-left:10px;
+		margin-top:-4px;
+	}
+	rrrr{
+		margin-top:10% !important;
+		
+	}
+
+}
+
+@media (min-device-width: 414px) and (min-device-height: 736px){
+	/* Home */
+	
+	
+		.plusicon{
+	
+			position:absolute; vertical-align:middle; right:4% !important; top:18% !important;	
+			padding:5px !important;
+		
+		}
+
+
+	.backbutton12{
+		left: 10px !important;
+		position: relative !important;
+		top: 23% !important;
+		width: 22% !important;
+		padding:6px !important;
+		padding-right:6px !important;
+		padding-left:6px !important;
+	}	
+			.backbutton{
+		width:70% !important;
+		
+		}
+
+
+	
+
+	.custheight{
+		height:60px !important;;
+		}
+	
+		
+.newslettericons
+{
+background:url(img1/cbg@2x.png) !important; background-size:contain !important; background-repeat:repeat-x !important; height:77px !important;
+}		
+.newslettericons img
+{
+width:20% !important;	
+}	
+.newslettericons p{
+margin-top:10px !important; 
+font-size: 0.85em !important;   
+padding-left:15px !important;
+}	
+
+
+
+	
+		.sliderres{
+	
+		height:392px !important;
+		
+		}
+
+	
+	
+	.homeheader1{
+		background-color:#38549B;
+		color:white;
+		padding:16px;
+		font-size:26px;
+	}
+	.homeimage1{
+	
+		max-height:258px !important; 
+		min-height:258px !important;
+		width:100% !important;
+	
+	}
+	.homeimage{
+	
+		max-height:100px !important; 
+		min-height:100px !important;
+		width:100% !important;
+	
+	}
+	.ui-content{
+		padding:0px !important;
+	}
+	
+	.homefooter{
+	
+		width:100% !important;
+		min-height:67px !important;
+		max-height:67px !important;
+	}
+	
+	.yellowtext1{
+		width:100%;
+		background-color:#E9A802;
+		height:45px;
+	}
+	.yellowimage1{
+		padding:4px;
+		height:37px;
+	}
+	.yellowcontent1{
+		color:#000;
+		padding:12px;
+		float:right;
+	}
+	/* Eventpage */
+	.eventtop1{
+		width:100%; 
+		float:left;
+		background-color:#38549B;
+		color:white; 
+		min-height:66px;
+	}
+	.eventtopimage11{
+		margin-top:13px;
+		width:35%;
+		margin-left:6px;
+	}
+	.eventtoptext1{
+		margin-top:-33px;
+		margin-left:51px;
+		font-size:20px;
+	}
+	.eventtopimage22{
+	
+		margin-left: -6px;
+		margin-top: 13px;
+		width: 90%;
+	}
+	.eventcontenttext1{
+		font-size:13px;
+		text-align:center;
+		
+		}
+	
+	/* Contacts,socialmedia,newsletter,locate us, notification header CSS */
+	.schoolheadertop{
+		background-color:#38549B;
+		height:66px;
+		}
+	.schoolheaderimage{
+		width:10%;
+		position:absolute;
+		margin-top:11px;
+	}
+	.schoolheadertext1{
+		margin-top:-45px;
+		margin-left:46px;
+		color:white;
+		font-size:20px;
+	}
+	.schoolheadertext2{
+		text-align:center;
+		margin-top:-30px;
+		color:white;
+		font-size:26px;
+	}
+	/* Contacts */
+	.contactsmain{
+		 height:52px;
+		 background-color:#D2D5D7;
+		 margin-right:7px;
+		 margin-top:26px;
+		 margin-left:7px;
+		 text-align:center;
+		 border-radius:2px;
+	  }
+	.contactsimagetop{
+		height:75px;
+		background-color:#D2D5D7;
+		margin-right:0px;
+		margin-top:11px;
+		margin-left:0px;
+		border-radius:2px;
+	}
+	.contactsimagetop1{
+		 height:75px;
+		 background-color:#D2D5D7;
+		 margin-right:7px;
+		 margin-top:30px;
+		 margin-left:7px;
+		 border-radius:2px;
+	}
+	.contactsimage{
+		width:90%;
+		height:90%;
+		margin-top:0px;
+		margin-left:7px; 
+		border-radius: 50%;
+	}
+	/* Social Media */
+	.socialmediamain{
+		width:100%;
+	}
+	.socialmediaimage1{
+		margin-top:15px;
+		}
+	/* LocateUs */
+	locatecontentlabel{
+		width:75%;
+		margin-top:80px;
+	}
+	loctecontenttext1{
+		margin-left:46px;
+		margin-right:46px;
+		margin-top:60px;
+	}
+	locatecontenttext2{
+		float:left;
+		margin-top:-21px;
+		margin-left:-8px;
+	}
+	locatecontentimage{
+		width:19px;
+		margin-left:10px;
+		margin-top:-4px;
+	}
+	rrrr{
+		margin-top:10% !important;
+		
+	}
+
+}
+
+
+
+.firstrowwidth1{
+		width:63.5% !important;
+	}
+.firstrowwidth2{
+	width:36.5% !important; 
+	}	
+.secondrowwidth1{
+	width:41.5% !important;
+	}
+.secondrowwidth2{
+	width:58.5% !important;
+	}	
+.thirdrowwidth1{
+	width:54.5% !important;
+	}
+.thirdrowwidth2{
+	width:45.5% !important;
+	}	
+.footerwidth{
+	width:50%;	
+	}	
+.customheight{
+	width:101%;
+	height:70px;
+	}	
+.customfooter{
+	width:100%;
+	height:40px;
+	}	
+	
+	.ui-listview .ui-li-has-thumb > img:first-child, .ui-listview .ui-li-has-thumb > .ui-btn > img:first-child, .ui-listview .ui-li-has-thumb .ui-li-thumb
+	{
+	
+	left:10px;
+	top:7px;	
+		
+		}
+
+		
+		
+		
+	.ui-listview > .ui-li.newslettericons-has-thumb > .ui-btn, .ui-listview > .ui-li.newslettericons-static.ui-li.newslettericons-has-thumb	
+	{
+		padding-left:5.25em !important;	
+		}
+
+
+
+	
+      ul.notificationcolor li:first-child{
+		 
+		 	border-top:none !important; 
+		  
+		  }
+	
+	
+		
+	
+	.eventcontenttext2{
+		
+		font-size:0.95em !important;
+		color:#000000 !important;	
+		font-weight:700 !important;
+		}	
+
+.gm-style .place-card-large{
+	
+	display:none !important;
+	
+	}
+	
+	.gm-style .default-card{
+	display:none !important;		
+		
+		}
+	.place-card, .place-card-medium{
+		display:none !important;
+		}
+.padding30{
+	padding-left:30px !important;
+	
+	}	
+ul.listevent li{
+		padding-left:30px !important;
+	}	
+	iframe{
+	
+	height:600px !important;
+		
+		}
+	
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+.alert.in {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.35);
+    pointer-events: auto;
+}
+.alert, .alert > .alert-content {
+    transition: all 0.2s ease-in-out 0s;
+}
+.alert {
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+element.style {
+    margin-top: -85px;
+}
+.alert.in > .alert-content {
+    left: 0;
+    right: 0;
+}
+.alert, .alert > .alert-content {
+    transition: all 0.2s ease-in-out 0s;
+}
+.alert-content {
+    background-image: linear-gradient(to bottom, #eef3f3, #d8e2e2 50%, #ebf0f0);
+    border-radius: 8px;
+    left: -100%;
+    margin: 0 15px;
+    padding: 12px 15px;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+}
+.alert-content > h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.alert-content > p {
+    font-size: 14px;
+    text-align: center;
+}
+.alert-buttons {
+    border-top: 1px solid #c6c9c8;
+    margin: 15px -15px -12px;
+    overflow: hidden;
+}
+		
+		
+		
+		
+		
+		
+	.mapheight{
+		position:absolute;
+		top:200px;
+		width:100% !important;
+		bottom:0px;
+	}	
+		
+		
+		
+	.ui-listview > li p{
+	
+		white-space:normal !important;	
+		
+		}	
+		
+		
+</style>
+</head>
+<body class="app">
+<!--------------------Home 414 to 736---------------->
+<div data-role="page" id="index"  data-title="School Apps">
+    <!-- /header -->
+    <div data-role="header" data-id="persistent"  data-position="fixed">
+        <div style="background-color:#38549b;  width:100% !important" class="custheight"  >
+          <span style="position:absolute !important; font-size:22px !important; left:40% !important; top:43%; color:#FFF; text-shadow:none !important; font-weight:500 !important ">
+                Home
+            </span> 
+		</div>
+    </div>
+    <!-- /header -->
+    <!--content--->
+    <div data-role='content'>
+
+        <ul class="rslides" id="slider1">
+
+		</ul>
+    
+    <div>
+       <div style="background-color:#E9A802 !important; width:100%; height:35px !important;">
+            <img src="yellow/storyboard.png" style=" height:100% !important;"   />
+        </div>
+        
+        <div class="firstrowwidth1" style="float:left;">
+            <a href="#event"  data-transition="slide"  onclick="loadupcomingeventspage()" ><img class="customheight" src="homeicons/upcoming_Events@3x.png" /></a>
+        </div>
+        <div class="firstrowwidth2" style="float:right;">
+            <a href="#contact"   data-transition="slide"  ><img  class="customheight" src="homeicons/Contacts@3x.png" /></a>
+        </div>
+            
+        <div class="secondrowwidth1" style="float:left;">
+            <a href="#socialmedia"   data-transition="slide"  ><img class="customheight"  src="homeicons/Facebook@3x.png" /></a>
+        </div>
+        <div class="secondrowwidth2"  style="float:right;">
+            <a href="#newsletter"   data-transition="slide"  ><img class="customheight"  src="homeicons/Communication@3x.png" /></a>
+        </div>
+        
+        <div  class="thirdrowwidth1"  style="float:left;"  >
+            <a href="#"><img  class="customheight" id="aisclive"  src="homeicons/AISC_Live@3x.png" /></a>
+        </div>
+        <div  class="thirdrowwidth2" style="float:right;">
+            <a href="#"><img class="customheight" id="aiscgallery"  src="homeicons/Photo_gallery@3x.png"   /></a>
+        </div>
+        
+        <div  class="footerwidth" style="float:left;">
+            <a href="#locateuss"   data-transition="slide"  ><img  class="customfooter" id="locateusicon" src="homeicons/LocateUs.png" /></a>
+        </div>
+        <div class="footerwidth" style="float:right;">
+            <a href="#notification"   data-transition="slide"  onclick="loadnotificationpage()"><img  class="customfooter" id="notificationc"  src="homeicons/notification.png" /></a>
+        </div>
+		<div style="clear:both;"></div>
+    </div>
+   </div>
+   	<!-----Content------------->
+</div>
+<!--------------------/Home Page---------------->
+
+<!--------------------EventPage----------------->
+<div  data-role="page" id="event" data-title="School Apps" >
+    <!---header -->
+     <div  data-role="header" data-id="persistent"  data-position="fixed" style="background-color:transparent !important;">
+        <div style="background-color:#38549b; height:60px; width:100% !important"  >
+				<div class="backbutton12"  style="min-width:100px !important; min-height:50px !important;" >
+              		   <img src="images/gallery/backbuton.png" class="backbutton" />
+                 </div>
+                 
+                            
+                <span style="position:absolute !important; font-size:22px !important; left:40% !important; top:19%; color:#FFF; text-shadow:none !important; font-weight:500 !important ">
+                        Events 
+                </span> 
+                <span class="plusicon" onclick="addeventcalendar()"><img src="events/plusicon.png"  style="width:18px !important;" /></span>
+        </div>
+    
+
+            <P class="eventcontenttext1" style="font-weight:normal !important; background-color: transparent !important ;padding-left:15px !important; padding-top:15px !important; padding-bottom:5px !important; padding-right:15px; " >To add Events to your Phones Calender,Select multiple items and Press Add</P>
+
+   </div> 
+   	<!--/header---->
+    <!----content---->
+	<div data-role="content">
+            <div class="example-wrapper" data-iscroll>            
+                <ul class="listevent" id="events_id" data-role="listview"  data-divider="true" >
+
+                        
+
+
+                </ul>
+            </div>    
+ 
+    </div>
+    
+    
+</div>
+
+<!-------------------/EventPage----------------->
+
+<!-------------------contactsPage--------------->
+<div  data-role="page" id="contact" data-title="School Apps">
+    <!---header -->
+    <div  data-role="header" data-id="persistent"  data-position="fixed" style="background-color:#38549b !important">
+    <div style="background-color:#38549b; height:60px; width:100% !important"  >
+    		<div class="backbutton12"  style="min-width:100px !important; min-height:50px !important;" >
+    			<img src="images/gallery/backbuton.png" class="backbutton" />
+               </div> 
+                
+                <span style="position:absolute !important; font-size:22px !important; left:40% !important; top:45%; color:#FFF; text-shadow:none !important; font-weight:500 !important ">
+               		Contacts
+                </span> 
+       </div>
+           
+    </div>
+   <!--/header---->
+    <!----content---->
+   <div data-role="content" id="contact_id" style="padding-bottom:50px !important;" class="example-wrapper" data-iscroll>     
+   
+   
+<!--<div class="contactsimagetop examplecolor" style="width:100%; height:50px;">
+	<p style="font-size:15px; vertical-align:central !important; position:relative !important; top:35% !important; text-align:center !important">Main Reception <a style="text-decoration:none !important; color:#000 !important; font-weight:normal ; " href="" >044 - 22549000 </a></p></div>-->
+    
+    
+    
+    <center>
+    <div class="contactsimagetop examplecolor" style="width:95%; height:50px;"><p style="font-size:15px; vertical-align:middle !important;position:relative; top:35%;">Main Reception 044 - 22549000 </p></div></center>
+    
+    <center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/34382hoover3.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Andrew Hoover<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail('headofschool@aisch.org')" >headofschool@aisch.org</a></p></div></div></div></center>
+    
+    <center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/7656Basnight_Joelle.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Joelle Basnight<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail('hsprincipal@aisch.org')" >hsprincipal@aisch.org</a></p></div></div></div></center>
+    
+    <center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/16413alan.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Alan Phan<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail('msprincipal@aisch.org')" >msprincipal@aisch.org</a></p></div></div></div></center>
+    
+    <center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/89743kevin hall.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kevin Hall<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail('esprincipal@aisch.org')" >esprincipal@aisch.org</a></p></div></div></div></center>
+    
+    <center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/46018Kim Bane.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kim Bane<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail('bkim@aisch.org')" >bkim@aisch.org</a></p></div></div></div></center>
+    
+    <center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/46385kevin.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kevin Crouch<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail('itdirector@aisch.org')" >itdirector@aisch.org</a></p></div></div></div></center>
+    
+      <center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/63204Alankrit.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Alankrit Arora<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail('directorofbusinessaffairs@aisch.org')" >directorofbusinessaffairs@aisch.org</a></p></div></div></div></center>
+
+   </div> 
+   
+</div>
+<!------------------/contactsPage--------------->
+
+<!-------------------Socialmedia---------------->
+<div  data-role="page" id="socialmedia" data-title="School Apps" style="background-color:#36559E;">
+    <!---header -->
+    <div  data-role="header" data-id="persistent"  data-position="fixed">
+        <div style="background-color:#38549b; height:60px; width:100% !important"  >
+    			<div class="backbutton12"  style="min-width:100px !important; min-height:50px !important;" >
+                <img src="images/gallery/backbuton.png" class="backbutton" />
+                </div>
+                
+                <span style="position:absolute !important; font-size:22px !important; left:38% !important; top:45%; color:#FFF; text-shadow:none !important; font-weight:500 !important ">
+               		Social Media
+                </span> 
+            </div>    
+    </div>
+    <!--/header---->
+    <!----content---->
+   	<div class="socialmediaimage1">
+    	<img class="socialmediamain" id="facebook"  src="social_Images/fb@3x.png" />
+   		<img class="socialmediamain" id="google"  src="social_Images/google@3x.png" />
+        <img class="socialmediamain" id="instagram"  src="social_Images/instagram@3x.png" />
+        <img class="socialmediamain" id="twitter"  src="social_Images/twitter@3x.png" />
+        <img class="socialmediamain" id="youtube"  src="social_Images/youtube@3x.png" />
+    </div>
+   
+</div>
+<!------------------/Socialmedia---------------->
+
+<!------------------Newsletter---------------->
+<div  data-role="page" id="newsletter" data-title="School Apps">
+    <!---header -->
+    <div data-role="header" data-id="persistent"  data-position="fixed">
+         <div style="background-color:#38549b; height:60px; width:100% !important"  >
+           <div class="backbutton12"  style="min-width:100px !important; min-height:50px !important;" >
+              <img src="images/gallery/backbuton.png" class="backbutton" />
+              </div>
+            <span style="position:absolute !important; font-size:22px !important; left:40% !important; top:45%; color:#FFF; text-shadow:none !important; font-weight:500 !important ">
+                Newsletters
+            </span> 
+        </div>
+    </div>
+    <!--/header---->
+    <!----content---->
+    <div data-role="content" >
+            <center>
+                <div style="width:75%; padding-top:80px;">
+                    <input placeholder="Enter Your Password" type="password" id="getpassword"  form="" class="" />
+                    <br />
+                	 	<!--<img style="width:19px; float:left !important" src="images/gallery/checkbox1.png" />-->
+                        <p style="color:#718497; margin-top:0px;float:left !important">
+                                <input type="checkbox" id="remember_me" name="remember_me" style="float:left; " />
+                                <div onclick="triggercheckbox()" style="float:left;top:-6px; position:relative;left: 31px !important; padding:5px !important;  " >Remember me</div> 
+                                
+                                <a style=" text-shadow:none;  float:right !important; margin-top:-5px; padding-right:7px !important;  text-decoration:none !important;"  id="submitpass"   ><img src="newslettericons/button.png" id="buttonsubmit"  style="width:80px !important"  /></a>
+                        </p>
+                   
+                </div>
+            </center>
+            
+   	</div>
+   
+</div>
+<!-----------------/Newsletter---------------->
+
+<!------------------Newsletter---------------->
+<div  data-role="page" id="newsletterloggedin" data-title="School Apps" >
+    <!---header -->
+    <div  data-role="header" data-id="persistent"  data-position="fixed">
+    <div style="background-color:#38549b; height:60px; width:100% !important"  >
+    		<div class="backbutton12"  style="min-width:100px !important; min-height:50px !important;" >
+    			<img src="images/gallery/backbuton.png" class="backbutton" />
+             </div>   
+                <span style="position:absolute !important; font-size:22px !important; left:40% !important; top:45%; color:#FFF; text-shadow:none !important; font-weight:500 !important ">
+               		Newsletters
+                </span> 
+           </div>     
+    </div>
+    <!--/header---->
+    
+ <div data-role="content">
+         <div class="example-wrapper" data-iscroll>            
+            <ul id="Newsletter_id" data-role="listview"  data-divider="true" >
+			</ul>
+        </div>    
+    </div>
+    
+    <!----content---->
+   
+</div>
+<!-----------------/Newsletter---------------->
+
+
+
+<div data-role="page" id="locateuss" data-title="School Apps">
+
+    <!---header -->
+  <div  data-role="header" data-id="persistent"  data-position="fixed">
+    <div style="background-color:#38549b; height:60px; width:100% !important"  >
+    	<div class="backbutton12"  style="min-width:100px !important; min-height:50px !important;" >
+    			<img src="images/gallery/backbuton.png" class="backbutton" />
+            </div>    
+                <span style="position:absolute !important; font-size:22px !important; left:40% !important; top:45%; color:#FFF; text-shadow:none !important; font-weight:500 !important ">
+               		Locate Us
+                </span> 
+             </div>   
+    </div>
+    <!--/header---->
+    <!----content---->
+    
+    <div role="main" class="ui-content" >
+	
+       	<div style="margin-top:10% !important; height:100px;">
+            <p style="text-align:center;">American International School<br />
+            100 Feet Road, Taramani<br />
+            Chennai-600 113, India<br />
+            Tel: &ensp;91 44 22549000</p>
+    	</div>
+	    <div id="map-canvas" class="mapheight">
+        
+        </div>
+        
+        
+        
+    </div>
+   
+</div>
+
+
+<!----------------Notification---------------->
+<div  data-role="page" id="notification" data-title="School Apps" style="background-color:#1E3869;">
+    <!---header -->
+     <div  data-role="header" data-id="persistent"  data-position="fixed">
+        <div style="background-color:#38549b; height:60px; width:100% !important"  >
+		        <div class="backbutton12"  style="min-width:100px !important; min-height:50px !important;" >
+                    <img src="images/gallery/backbuton.png" class="backbutton" />
+                   </div> 
+                    <span style="position:absolute !important; font-size:22px !important; left:40% !important; top:45%; color:#FFF; text-shadow:none !important; font-weight:500 !important ">
+                        Notifications
+                    </span> 
+                 </div>   
+    </div>
+    
+     	<div data-role="content" style="margin-top:12px !important;" >	
+        	
+             <div class="example-wrapper" data-iscroll>            
+                <ul id="Notifications_id" class="notificationcolor" data-role="listview"  data-divider  >
+
+                </ul>
+            </div>    
+
+            
+        </div>
+			    
+    </div>
+    
+    <!---header---->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>document.write('<div class="js">'); // demo only </script>
+    <!-- The alert is activated by toggling the "in" class. -->
+    <div class="alert in calendarAlert" style="display:none" >
+      <!-- The top margin must be set to 50% of the alert's height using JavaScript. -->
+      <div class="alert-content" style="margin-top: -85px;">
+        <h3>Calendar</h3>
+        <p id="calendarMessage"></p>
+        </div>
+    </div>
+    <script>document.write('</div>'); // demo only </script>
+
+
+<!---------------/Notification---------------->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.js"></script>
+<script src="js/responsiveslides.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/pushapps.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.iscrollview.js"></script>
+<script type="text/javascript" src="js/SocialSharing.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+<script type="text/javascript" src="js/googlescript.js"></script>
+
+<script>
+
+
+
+
+
+    // You can also use "$(window).load(function() {"
+//	GLOBAL VALUES
+
+/*$(function(){
+	
+	
+	 $("#slider1").responsiveSlides({
+        maxwidth: 800,
+        speed: 800
+      });
+
+	});
+
+*/
+setTimeout(function() {
+navigator.splashscreen.hide();
+//	
+}, 3000);
+
+
+
+$('.backbutton12').on("touchstart",function(e){
+		$(this).children('.backbutton').css("opacity","0.4");
+		})
+.on("touchmove",function(e){  })	
+.on("touchend",function(e){
+		$(this).children('.backbutton').css("opacity","1.0");
+	$.mobile.changePage('#index',{ transition:'slide' ,  reverse:'true'  });
+});	
+
+
+
+var AppTokenId='abcdefghijklmnopqrstuvwxyz';
+var ajaxpath = 'http://www.safelearners.com/aisc/appajax/';
+var imagepath ='http://www.safelearners.com/aisc/';
+var event_read_array=[];
+var event_read_list='';
+var imageuri;
+var total_notificationcount=0;	
+var newtotal_notificationcount=0;	
+var currentEventId=0;
+
+var EventCheckValues='';
+
+var db = window.openDatabase("aisc", "1.0", "aisc user local Database", 200000); //will create database Dummy_DB or open it		
+
+var paswordDbCount=0;
+
+
+function callbannerfromserver()
+{
+//	alert('sss');
+var screenwidth=window.screen.width;
+var screenheight=window.screen.height;
+
+var phonemodel=''; 
+var banner='';
+		if(screenwidth == 320 && screenheight == 480)
+		{
+		phonemodel='4s';
+		}else if(screenwidth == 320 && screenheight == 568){
+		phonemodel='5s';
+		}else if(screenwidth == 375 && screenheight == 667){
+		phonemodel='6';
+		}else if(screenwidth == 414 && screenheight == 736){
+		phonemodel='6p';
+		}
+	
+	var bannerpath =ajaxpath+'loadbanner.php?AppTokenId='+AppTokenId+'&phonemodel='+phonemodel;
+	
+		$.support.cors = true;
+		$.ajax({
+		url:bannerpath,
+		type:'POST',
+		contentType: "application/json",
+		async: true,
+		dataType: 'json',
+		crossDomain: true,
+		success: function(data)
+		{
+		
+		//		alert(data.status.code);
+		if(data.status.code=='100')
+		{
+		//	alert(data.Response);
+		//		alert('11');
+			var	Response = data.Response;
+		//		alert('14');
+		
+		$.each(Response, function(index, element) {
+					banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="'+imagepath+element.imageurl+'" ></li>';
+		});
+			
+		if(banner!='')
+		{					
+			$('#slider1').html('');
+			$('#slider1').html(banner);
+			
+			 $("#slider1").responsiveSlides({
+				maxwidth: 800,
+				speed: 800
+			  });
+		}
+			
+
+			
+		}else{
+			navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
+			}	
+		},
+		error: function(e)
+		{
+		//navigator.notification.alert("System error 83014  contact . Please try again in a couple of minutes.", alertCallback, "AISC", "Done");
+		}
+		});
+
+	
+	}
+
+  
+  function callbanner()
+  {
+var banner='';
+var screenwidth=window.screen.width;
+var screenheight=window.screen.height;
+if(screenwidth == 320 && screenheight == 480)
+{
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/4s/1.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/4s/2.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/4s/3.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/4s/4.png" ></li>';
+	}else if(screenwidth == 320 && screenheight == 568){
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/5s/1.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/5s/2.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/5s/3.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/5s/4.png" ></li>';
+	}else if(screenwidth == 375 && screenheight == 667){
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6/1.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6/2.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6/3.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6/4.png" ></li>';
+	}else if(screenwidth == 414 && screenheight == 736){
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6p/1.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6p/2.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6p/3.png" ></li>';
+  banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6p/4.png" ></li>';
+	}
+  
+if(banner!='')
+{
+
+	$('#slider1').html('');
+	$('#slider1').html(banner);
+	
+	 $("#slider1").responsiveSlides({
+        maxwidth: 800,
+        speed: 800
+      });
+	} 
+  }
+  
+        // device APIs are available
+ 
+ 
+ </script>
+ 
+ <script >
+  app.initialize();
+ </script>
+ <script>
+ 
+ 
+ 
+/*function loadcontacts()
+ {
+	 if(navigator.network.connection.type == Connection.NONE)
+	 {
+		loadContactsFromLocalDb(); 
+		 }
+		else{
+			loadcontactsfromserver(); 
+		}		 
+	 }
+	*/ 
+	 
+function loadContactsFromLocalDb()
+{
+	//alert("loadContacsFromLocalDb");
+	db.transaction(populateContactDB, errorContactCB, successContactCB);
+	}	 
+
+function populateContactDB(tx) {
+	//alert("loadContacsFromLocalDb  sdfsa asedf asdf");
+tx.executeSql('CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL , contactemail TEXT NOT NULL , imagepath TEXT NOT NULL  , status INTEGER )');
+}
+
+function successContactCB() {
+	db.transaction(queryContactDB,errorContactCB);
+}
+function queryContactDB(tx){
+	var value = '1';
+tx.executeSql('SELECT * FROM contacts where status=? ',[value],queryContactSuccess,errorContactCB);
+}
+
+
+function errorContactCB(err){
+	//alert("ERROR : "+err);
+	}
+
+function queryContactSuccess(tx,result){
+		var length = result.rows.length;
+//		alert('length');
+		var contactappend='';
+			if(length >0)
+			{
+			$('#contact_id').html('');	
+			
+			contactappend+='<center><div class="contactsimagetop examplecolor" style="width:95%; height:50px;">';
+			contactappend+='<p style="font-size:15px; vertical-align:middle !important;position:relative; top:35%;">Main Reception 044 - 22549000 </p></div></center>';
+			
+			
+				for(var i=0; i< length ; i++)
+				{
+		//			alert(result.rows.item(i).name);
+					var name =	result.rows.item(i).name;
+					var	contactemail =result.rows.item(i).contactemail;
+					var image =	result.rows.item(i).imagepath;
+					var status = result.rows.item(i).status; 
+					imageuri =imagepath+image;
+		
+	
+		
+					contactappend+='<center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;">';
+		
+			if((image=='') || (navigator.network.connection.type == Connection.NONE) ){
+				//image = '';
+				contactappend+='<img class="contactsimage" src="img/noimageicon.png">';
+			}else{
+				contactappend+='<img class="contactsimage" src="'+imagepath+image+'">';		
+				}
+		contactappend+='</div><div style="float:right;  width:80% !important;">';
+		contactappend+='<div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">'+name+'<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\''+contactemail+'\')" >'+contactemail+'</a></p></div></div></div></center>';
+		}
+		
+		
+		
+		
+
+
+		
+		if(navigator.network.connection.type == Connection.NONE){
+			
+			var append_contact='<center><div class="contactsimagetop examplecolor" style="width:95%; height:50px;"><p style="font-size:15px; vertical-align:middle !important;position:relative; top:35%;">Main Reception 044 - 22549000 </p></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/34382hoover3.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Andrew Hoover<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'headofschool@aisch.org\')" >headofschool@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/7656Basnight_Joelle.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Joelle Basnight<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'hsprincipal@aisch.org\')" >hsprincipal@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/16413alan.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Alan Phan<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'msprincipal@aisch.org\')" >msprincipal@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/89743kevin hall.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kevin Hall<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'esprincipal@aisch.org\')" >esprincipal@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/46018Kim Bane.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kim Bane<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'bkim@aisch.org\')" >bkim@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/46385kevin.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kevin Crouch<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'itdirector@aisch.org\')" >itdirector@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/63204Alankrit.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Alankrit Arora<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'directorofbusinessaffairs@aisch.org\')" >directorofbusinessaffairs@aisch.org</a></p></div></div></div></center>';
+			$('#contact_id').html(append_contact);
+			
+		}else{
+				$('#contact_id').html(contactappend);		
+			}
+				
+			}//if close
+			else{
+				//CONNECT TO SERVER
+				 if(navigator.network.connection.type == Connection.NONE){
+						navigator.notification.alert("No contacts available , Please turn on Data to sync contact", alertCallback, "AISC", "Done");
+				 }else{
+					loadcontactsfromserver(); 
+					 }
+			}
+}
+
+function loadcontactsfromserver()
+{
+	//alert("loadContacsFromserver  populate");
+	db.transaction(populateContactDB, errorContactCB, successContactCBServer);
+}
+
+
+function deletedata(tx){
+	
+		var value='0';
+		var cond='0';
+        tx.executeSql("UPDATE contacts set status=? where id!=?;", [ value, cond ]); // array of values for the ? placeholders
+	}
+
+function ErrorDeleteCallBack(err){
+//	alert('ERROR FOR DELETE = '+err.message);
+	
+	} 
+function successContactCBServer(){
+//	alert('adasda !!!!');
+	
+	$.support.cors = true;
+	$.ajax({
+	url:ajaxpath+'loadcontacts.php?AppTokenId='+AppTokenId,
+	type:'POST',
+	contentType: "application/json",
+	async: true,
+	dataType: 'json',
+	crossDomain: true,
+	success: function(data)
+	{
+		 
+	db.transaction( function(tx){ deletedata(tx) }, ErrorDeleteCallBack );	
+		
+//		alert(data.status.code);
+			if(data.status.code=='100')
+			{
+			//	alert(data.Response);
+		//		alert('11');
+				var	Response = data.Response;
+		//		alert('14');
+			
+			$.each(Response, function(index, element) {
+				
+				db.transaction( function(tx){ insertContactvalues(tx, element.name, element.contactemail, element.imagepath , element.status )}, ErrorCallBack );	
+			});
+				
+				loadContactsFromLocalDb();
+				
+		}else{
+				navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
+				}	
+	},
+	error: function(e)
+	{
+	   //navigator.notification.alert("System error 83014  contact . Please try again in a couple of minutes.", alertCallback, "AISC", "Done");
+	}
+	});
+	
+ }
+ 
+ 
+function ErrorCallBack(err){
+	//alert("ERROR :"+err);
+}
+
+
+
+function insertContactvalues(tx,parameter1,parameter2,parameter3,parameter4)
+{
+	//alert(parameter1+'===='+parameter2+'===='+parameter3+'===='+parameter4);
+	tx.executeSql('INSERT INTO contacts(name , contactemail , imagepath , status  ) VALUES (?,?,?,?)',[parameter1,parameter2,parameter3,parameter4]);
+	
+ }
+
+
+
+
+/******************************************************************************************************************************************************
+	
+	UPCOMING EVENTS CODE BELOW
+
+*******************************************************************************************************************************************************/
+
+/*function loadupcomingevents()
+ {
+	 if(navigator.network.connection.type == Connection.NONE)
+	 {
+		loadEventsFromLocalDb(); 
+		 }
+		else{
+			loadEventsfromserver(); 
+		}		 
+	 }
+	*/ 
+	 
+function loadEventsFromLocalDb()
+{
+	//alert("loadupcomingevents LocalDb");
+	db.transaction(populateEventsDB, errorEventsCB, successEventsCB);
+	}	 
+
+function populateEventsDB(tx) {
+	//alert("loadupcomingevents FromLocalDb  sdfsa asedf asdf");
+tx.executeSql('CREATE TABLE IF NOT EXISTS upcomingevents (id INTEGER PRIMARY KEY AUTOINCREMENT, event_id INTEGER ,eventname TEXT NOT NULL , datetime TEXT NOT NULL , readstatus TEXT NOT NULL , status INTEGER )');
+}
+
+function successEventsCB() {
+	db.transaction(queryEventsDB,errorEventsCB);
+}
+function queryEventsDB(tx){
+	var value ='1';
+tx.executeSql('SELECT * FROM upcomingevents where status=?',[value],queryEventsSuccess,errorEventsCB);
+}
+
+
+function errorEventsCB(err){
+	
+	//alert("ERROR : "+err.message);
+	}
+
+function queryEventsSuccess(tx,result){
+		var length = result.rows.length;
+		
+		
+		//alert("EVENTS LENGTH  = "+ length);
+		
+		var Eventsappend='';
+			if(length >0)
+			{
+			$('#events_id').html('');	
+				for(var i=0; i< length ; i++)
+				{
+		//	alert(result.rows.item(i).eventname);
+		var eventname =	result.rows.item(i).eventname;
+		var	datetime =result.rows.item(i).datetime;
+		var readstatus = result.rows.item(i).readstatus;
+		var event_id = result.rows.item(i).event_id;
+		
+	
+		
+		var value_id = 'event'+event_id;
+		
+/*		if(readstatus=='1')
+		{
+		Eventsappend+='<li style="padding-left:35px !important; background-color: #ccc !important ;" onclick="addeventcalendar(\''+value_id+'\')" id="event'+event_id+'" data-value1="'+eventname+'" data-value2="'+datetime+'" data-value3="'+readstatus+'" >';	
+			}
+		else{	
+		Eventsappend+='<li style="padding-left:35px !important;" onclick="addeventcalendar(\''+value_id+'\')" id="event'+event_id+'" data-value1="'+eventname+'" data-value2="'+datetime+'" data-value3="'+readstatus+'" >';	
+		}
+		Eventsappend+='<p class="list" style="color:#000; font-size: 0.95em !important;  ">'+eventname+'</p>';
+		Eventsappend+='<p class="list eventcontenttext2" style="color:#000" ><strong>'+datetime+'</strong></p></li>';
+*/	
+	
+		if(readstatus=='1')
+		{
+		Eventsappend+='<li class="padding30" style="background-color: #ccc !important ;" onclick="alreadyadded()" id="event'+event_id+'" data-value1="'+eventname+'" data-value2="'+datetime+'" data-value3="'+readstatus+'" >';	
+			}
+		else{	
+		Eventsappend+='<li class="padding30"  onclick="addcalenderdata(this)" id="event'+event_id+'" data-value1="'+eventname+'" data-value2="'+datetime+'" data-value3="'+readstatus+'" >';	
+		}
+
+Eventsappend+='<div style="width:90% !important; float:left !important">';
+Eventsappend+='<p class="list" style="color:#000;">'+eventname+'</p>';
+Eventsappend+='<p class="list eventcontenttext2" style="color:#000" >'+datetime+'</p></div>';
+Eventsappend+='<div style="width:10% !important ;float:right !important">';
+Eventsappend+='<img src="events/tick.png" style=" position: relative; padding-top:50%; width:130% !important; display:none !important" />';
+Eventsappend+='<input name="eventcheck[]" type="checkbox" style="display:none !important"  value="'+event_id+'" /></div></li>';
+	
+			}
+			
+			//alert("Eventsappend  "+Eventsappend);
+			
+		$('#events_id').empty().append(Eventsappend);
+		$('#events_id').trigger("create");
+		$('#events_id').listview().listview('refresh');		
+				
+			}//if close
+			else{
+				//CONNECT TO SERVER
+			//	alert(' again reload ');
+				 if(navigator.network.connection.type == Connection.NONE){
+						navigator.notification.alert("No Events available , Please turn on Data to sync contact", alertCallback, "AISC", "Done");
+				 }else{
+					loadEventsfromserver(); 
+					 }
+			}
+}
+
+
+function loadupcomingeventspage()
+{
+	
+	if(navigator.network.connection.type == Connection.NONE)
+	 {
+	   loadEventsFromLocalDb(); //loadNotificationsFromLocalDb();
+	   }
+		else{
+		loadEventsfromserver(); //loadNotificationsfromserver();
+		}
+	
+	
+	}
+
+function loadEventsfromserver()
+{
+	//alert("loadEventsFromserver  populate");
+	db.transaction(populateEventsDB, errorEventsCB, deleteEvents_data);
+	
+}
+
+
+function successEventsCBServer(){
+	
+//	alert('adasda !!!!');
+	//console.log("event_read_list  = "+event_read_list);	
+	var urlpath=ajaxpath+'loadevents.php?AppTokenId='+AppTokenId+'&event_read_list='+event_read_list;
+	//console.log(urlpath);	
+	$.support.cors = true;
+	$.ajax({
+	url:urlpath,
+	type:'POST',
+	contentType: "application/json",
+	async: true,
+	dataType: 'json',
+	crossDomain: true,
+	success: function(data)
+	{
+	
+	
+//	alert('evennts loaded');
+	//	alert(data.status.code);
+			if(data.status.code=='100')
+			{
+		//		alert(data.Response);
+			//	alert('11');
+				var	Response = data.Response;
+			//	alert('14');
+
+			$.each(Response, function(index, element) {
+				db.transaction( function(tx){ insertEventsvalues(tx, element.event_id, element.eventsname, element.datetime, element.readstatus ,element.status )}, ErrorCallBack );	
+			});
+				loadEventsFromLocalDb();
+				
+		}else{
+				navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
+				}	
+	},
+	error: function(e)
+	{
+	   //navigator.notification.alert("System error 83014 events. Please try again in a couple of minutes.", alertCallback, "AISC", "Done");
+	}
+	});
+ }
+ 
+ 
+function ErrorCallBack(err){
+	//alert("ERROR 11 :"+err.message);
+}
+
+
+function insertEventsvalues(tx,parameter1,parameter4,parameter2,parameter3,parameter5)
+{
+//	alert('122');
+//	alert(parameter1+'===='+parameter4+'======'+parameter2+'===='+parameter3+'====='+parameter5);
+	tx.executeSql('INSERT INTO upcomingevents( event_id, eventname ,datetime , readstatus ,status ) VALUES (?,?,?,?,?)',[parameter1,parameter4,parameter2,parameter3,parameter5]);
+ }
+
+
+
+
+
+
+
+function deleteEvents_data()
+{
+//	alert('aa');
+	
+		var value='1';
+		var cond='0';
+		var readstatusval = '1';
+        
+
+	db.transaction(function(tx){
+				tx.executeSql('SELECT event_id FROM upcomingevents where readstatus=? and status=? ',[readstatusval,value], successSelectEventsCB,errorEventsCB);
+			 },ErrordelteCB);
+			 
+	//		 alert('completed selecrt events');
+			 
+	db.transaction(function(tx){
+				var value='0';
+				var cond='0';
+        		tx.executeSql("UPDATE upcomingevents set status=? where id!=?;", [ value, cond ]); // array of values for the ? placeholders
+		},ErrordeletteCB);	 
+		
+	}
+	
+function ErrordeletteCB(err)
+{
+	//alert("Error event delete = "+err.message);
+	
+	} 	
+	
+function ErrordelteCB(err){
+	//alert("ErrordelteCB "+err.message);
+	
+	}
+
+function successSelectEventsCB(tx,result){
+	
+	//alert("Length of rows in table = "+ result.rows.length);
+	  var length = result.rows.length;
+				for(var i=0; i< length ; i++)
+				{
+				//	alert("array push ="+result.rows.item(i).event_id);
+					event_read_array.push(result.rows.item(i).event_id);
+ 				}
+			//	alert(event_read_array);
+				
+	
+	
+		//console.log(" event_read_list arraay length = "+ event_read_array.length );
+		if(event_read_array.length>0)
+		{
+		//console.log('event added in array');
+		event_read_list=event_read_array.join(); 
+		}else{
+		event_read_list ='0';
+		}
+
+	
+	//console.log(" event_read_list = "+ event_read_list);
+	 successEventsCBServer();
+				
+		//alert(" Every ");
+	}
+
+
+/******************************************************************************************************************************************************
+	
+	UPCOMING NEWSLETTER CODE BELOW
+
+*******************************************************************************************************************************************************/
+/*
+function loadupcomingNewsletter()
+ {
+	 if(navigator.network.connection.type == Connection.NONE)
+	 {
+		loadNewsletterFromLocalDb(); 
+		 }
+		else{
+			loadNewsletterfromserver(); 
+		}		 
+	 }
+	 */
+	 
+function loadNewsletterFromLocalDb()
+{
+	//alert("loadupcomingNewsletter LocalDb");
+	db.transaction(populateNewsletterDB, errorNewsletterCB, successNewsletterCB);
+	}	 
+
+function populateNewsletterDB(tx) {
+	//alert("loadupcomingNewsletter FromLocalDb  sdfsa asedf asdf");
+tx.executeSql('CREATE TABLE IF NOT EXISTS newsletter (id INTEGER PRIMARY KEY AUTOINCREMENT, newsletter_id INTEGER , name TEXT NOT NULL , department TEXT NOT NULL , newsimage TEXT NOT NULL , newsurl TEXT NOT NULL , color TEXT NOT NULL, status INTEGER )');
+}
+
+function successNewsletterCB() {
+	db.transaction(queryNewsletterDB,errorNewsletterCB);
+}
+function queryNewsletterDB(tx){
+	var value ='1';
+tx.executeSql('SELECT * FROM newsletter where status=?',[value],queryNewsletterSuccess,errorNewsletterCB);
+}
+
+
+function errorNewsletterCB(err){
+	
+	//alert("ERROR : "+err);
+	}
+
+function queryNewsletterSuccess(tx,result){
+		var length = result.rows.length;
+		
+		
+		//alert("Newsletter LENGTH  = "+ length);
+		
+		var Newsletterappend='';
+			if(length >0)
+			{
+			$('#Newsletter_id').html('');	
+				for(var i=0; i< length ; i++)
+				{
+			//alert(result.rows.item(i).newsurl);
+			
+		var department =	result.rows.item(i).department;
+		var	name =result.rows.item(i).name;
+		var newsimage = result.rows.item(i).newsimage;
+		var newsurl = result.rows.item(i).newsurl;
+		var color = result.rows.item(i).color;
+		
+		//console.log("name ="+name+" department  "+department +'newsimage = '+newsimage +' Newsurl = '+newsurl );
+
+
+Newsletterappend+='<li onclick=loadurl(\''+newsurl+'\') class="newslettericons" >';
+Newsletterappend+='<img  style=" padding-top:1%  ;vertical-align:middle !important"  src="'+imagepath+newsimage+'"  />';
+Newsletterappend+='<p>'+department+'<br />';
+Newsletterappend+='<strong style="color:'+color+'">'+name+'</strong>';                             
+Newsletterappend+='</li>';
+
+
+			}
+			
+			//alert("Newsletterappend  "+Newsletterappend);
+			
+		$('#Newsletter_id').empty().append(Newsletterappend);
+		$('#Newsletter_id').trigger("create");
+		$('#Newsletter_id').listview().listview('refresh');		
+				
+			}//if close
+			else{
+				//CONNECT TO SERVER
+		//		alert(' again reload ');
+				 if(navigator.network.connection.type == Connection.NONE){
+					//	navigator.notification.alert("No Newsletter available , Please turn on Data to sync contact", alertCallback, "AISC", "Done");
+				 }else{
+					loadNewsletterfromserver(); 
+					 }
+			}
+}
+
+
+
+
+function loadNewsletterfromserver()
+{
+	//alert("loadNewsletterFromserver  populate");
+	db.transaction(populateNewsletterDB, errorNewsletterCB, successNewsletterCBServer);
+	
+}
+
+
+function successNewsletterCBServer(){
+	
+//	alert('adasda !!!!');
+	
+	//console.log(ajaxpath+'loadnewsletter.php?AppTokenId='+AppTokenId);
+		
+	$.support.cors = true;
+	$.ajax({
+	url:ajaxpath+'loadnewsletter.php?AppTokenId='+AppTokenId,
+	type:'POST',
+	contentType: "application/json",
+	async: true,
+	dataType: 'json',
+	crossDomain: true,
+	success: function(data)
+	{
+	
+	deleteNewsletter_data();	
+//	alert('evennts loaded');
+	//	alert(data.status.code);
+			if(data.status.code=='100')
+			{
+		//		alert(data.Response);
+			//	alert('11');
+				var	Response = data.Response;
+			//	alert('14');
+
+			$.each(Response, function(index, element) {
+				db.transaction( function(tx){ insertNewslettervalues(tx, element.newsletter_id, element.name, element.department, element.newsimage, element.newsurl , element.color ,element.status )}, ErrorCallBack );	
+			});
+				loadNewsletterFromLocalDb();
+				
+		}else{
+				navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
+				}	
+	},
+	error: function(e)
+	{
+	   //navigator.notification.alert("System error 83014  newsletter. Please try again in a couple of minutes.", alertCallback, "AISC", "Done");
+	}
+	});
+ }
+ 
+ 
+function ErrorCallBack(err){
+	//alert("ERROR 11 :"+err.message);
+}
+
+
+function insertNewslettervalues(tx,parameter1,parameter2,parameter3,parameter4,parameter5,parameter6,parameter7)
+{
+//	alert('122');
+//	alert(parameter1+'===='+parameter2+'======'+parameter3+'===='+parameter4+'====='+parameter5+'====='+parameter6);
+	tx.executeSql('INSERT INTO newsletter( newsletter_id, name ,department ,newsimage, newsurl, color ,status ) VALUES (?,?,?,?,?,?,?)',[parameter1,parameter2,parameter3,parameter4,parameter5,parameter6,parameter7]);
+ }
+
+
+
+
+
+
+
+function deleteNewsletter_data()
+{
+	//alert('aa');
+	
+	db.transaction(function(tx){
+				var value='0';
+				var cond='0';
+        		tx.executeSql("UPDATE newsletter set status=? where id!=?;", [ value, cond ]); // array of values for the ? placeholders
+		},ErrordeletteCB);	 
+		
+	}
+	
+function ErrordeletteCB(err)
+{
+	//alert("Error event delete = "+err.message);
+	
+	} 	
+	
+function ErrordelteCB(err){
+	//alert("ErrordelteCB "+err.message);
+	
+	}
+
+function successSelectNewsletterCB(tx,result){
+	
+	//alert("Length of rows in table = "+ result.rows.length);
+		//alert(" Every ");
+	}
+
+
+
+
+
+
+
+
+
+/******************************************************************************************************************************************************
+	
+	 NOTIFICATIONS CODE BELOW
+
+*******************************************************************************************************************************************************/
+/*
+function loadnotifications()
+ {
+	 if(navigator.network.connection.type == Connection.NONE)
+	 {
+		loadNotificationsFromLocalDb(); 
+		 }
+		else{
+			loadNotificationsfromserver(); 
+		}		 
+	 }
+	*/ 
+	 
+function loadNotificationsFromLocalDb()
+{
+	//alert("loadupcomingNotifications LocalDb");
+	db.transaction(populateNotificationsDB, errorNotificationsCB, successNotificationsCB);
+	}	 
+
+function populateNotificationsDB(tx) {
+	//alert("loadupcomingNotifications FromLocalDb  sdfsa asedf asdf");
+tx.executeSql('CREATE TABLE IF NOT EXISTS notifications (id INTEGER PRIMARY KEY AUTOINCREMENT, notifications_id INTEGER , notifications TEXT NOT NULL , datetime TEXT NOT NULL , status INTEGER )');
+}
+
+function successNotificationsCB() {
+	db.transaction(queryNotificationsDB,errorNotificationsCB);
+}
+function queryNotificationsDB(tx){
+	var value ='1';
+tx.executeSql('SELECT * FROM notifications where status=? order by id desc',[value],queryNotificationsSuccess,errorNotificationsCB);
+//tx.executeSql('SELECT distinct(notifications_id) FROM notifications',[],local_successcountCB,localfailcountCB);
+
+}
+/*
+function localfailcountCB(err)
+{
+	//alert("Error localfailcount"+err.message);
+	}
+function local_successcountCB(tx,result){
+		newtotal_notificationcount=result.rows.length;
+		//console.log("newtotal_notificationcount = "+newtotal_notificationcount);
+	} 	
+	
+	
+	
+	*/
+	
+
+
+function errorNotificationsCB(err){
+	
+	//alert("ERROR : "+err);
+	}
+
+function queryNotificationsSuccess(tx,result){
+		var length = result.rows.length;
+	//alert("Notifications LENGTH  = "+ length);
+			var Notificationsappend='';
+			if(length >0)
+			{
+			$('#Notifications_id').html('');	
+				for(var i=0; i< length ; i++)
+				{
+			//alert(result.rows.item(i).newsurl);
+			
+		var notifications =	result.rows.item(i).notifications;
+		var	datetime =result.rows.item(i).datetime;
+		
+		//console.log("notifications ="+notifications+" datetime  "+datetime );
+
+		Notificationsappend+='<li style="padding-left:30px !important;">';
+		Notificationsappend+='<p style="color:#FFFFFF !important; font-size: 0.95em !important;  " class="list">'+notifications+'</p>';
+		Notificationsappend+='<p class="eventcontenttext2 lists" style="color:#FFFFFF !important" >'+datetime+'</strong></p>';
+	
+			}
+			
+			//alert("Notificationsappend  "+Notificationsappend);
+			
+		$('#Notifications_id').empty().append(Notificationsappend);
+		$('#Notifications_id').trigger("create");
+		$('#Notifications_id').listview().listview('refresh');		
+				
+			compareNotification();	
+			}//if close
+			else{
+				 if(navigator.network.connection.type == Connection.NONE){
+					//	navigator.notification.alert("No Notifications available , Please turn on Data to sync contact", alertCallback, "AISC", "Done");
+				 }else{
+					loadNotificationsfromserver(); 
+					 }
+			}
+}
+
+
+
+function compareNotification(){
+	
+	//console.log("Notification ===============");
+	
+	//console.log("statttttt = "+ newtotal_notificationcount +"===<>=="+total_notificationcount);
+	if((total_notificationcount < newtotal_notificationcount) && total_notificationcount>0 	)
+	{
+		//console.log("statttttt = "+newtotal_notificationcount+"===<>=="+total_notificationcount);
+		$.mobile.changePage('#notification',{ transition:'slide' });
+		}else{
+			
+		//console.log(' no notification');
+			}
+	
+	}
+function loadNotificationsfromserver()
+{
+	total_notificationcount=0;
+	newtotal_notificationcount=0;
+	
+	db.transaction(populateNotificationsDB, errorNotificationsCB, successNotificationsCBServer);
+}
+
+
+function successNotificationsCBServer(){
+	
+	getlastnotificationdata();
+	deleteNotifications_data();		
+	
+	
+	$.support.cors = true;
+	$.ajax({
+	url:ajaxpath+'loadnotifications.php?AppTokenId='+AppTokenId+'&userdeviceid='+UserDeviceId,
+	type:'POST',
+	contentType: "application/json",
+	async: true,
+	dataType: 'json',
+	crossDomain: true,
+	success: function(data)
+	{
+//	alert('evennts loaded');
+	//	alert(data.status.code);
+			if(data.status.code=='100')
+			{
+				var	Response = data.Response;
+		//		alert('14');
+
+			$.each(Response, function(index, element) {
+				
+				newtotal_notificationcount=newtotal_notificationcount+1;
+				
+				db.transaction( function(tx){ insertNotificationsvalues(tx, element.notifications_id, element.notification, element.datetime, element.status )}, ErrorCallBack );	
+			});
+				loadNotificationsFromLocalDb();
+				
+		}else{
+				navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
+				}	
+	},
+	error: function(e)
+	{
+	   //navigator.notification.alert("System error 83014 notification. Please try again in a couple of minutes.", alertCallback, "AISC", "Done");
+	}
+	});
+
+ }
+ 
+function ErrorCallBack(err){
+	//alert("ERROR 11 :"+err.message);
+}
+
+
+function insertNotificationsvalues(tx,parameter1,parameter2,parameter3,parameter4)
+{
+//	alert('122');
+//	alert(parameter1+'===='+parameter2+'======'+parameter3+'===='+parameter4);
+	tx.executeSql('INSERT INTO notifications( notifications_id, notifications ,datetime ,status ) VALUES (?,?,?,?)',[parameter1,parameter2,parameter3,parameter4]);
+ }
+
+
+
+
+function getlastnotificationdata()
+{
+	db.transaction(function(tx){
+				var value='1';
+				var cond='0';
+        		tx.executeSql("select distinct(notifications_id) from notifications",[],slectnotificationCB,errorslectnotificationCB);
+		},ErrordeletteCB);	 
+	}
+
+
+function slectnotificationCB(tx,result){
+		var lengthselected = result.rows.length;
+
+		total_notificationcount=lengthselected;
+		//alert('Length selected ====== '+total_notificationcount);
+		//console.log(total_notificationcount);
+	
+	}
+function errorslectnotificationCB(err)
+{
+//	alert('error select ='+err.message);
+	
+	}	
+
+
+function deleteNotifications_data()
+{
+	//alert('aa');
+	
+	db.transaction(function(tx){
+				var value='0';
+				var cond='0';
+        		tx.executeSql("UPDATE notifications set status=? where id!=?;", [ value, cond ]); // array of values for the ? placeholders
+		},ErrordeletteCB);	 
+	}
+	
+function ErrordeletteCB(err)
+{
+	//alert("Error event delete = "+err.message);
+	
+	} 	
+	
+function ErrordelteCB(err){
+	//alert("ErrordelteCB "+err.message);
+	
+	}
+
+function successSelectNotificationsCB(tx,result){
+	
+	//alert("Length of rows in table = "+ result.rows.length);
+		//alert(" Every ");
+	}
+
+
+ /************************************************************************************************************************************************
+	
+	LOAD LINKS CODE BELOW
+
+*******************************************************************************************************************************************************/
+
+/*function loadlinks()
+ {
+	 if(navigator.network.connection.type == Connection.NONE)
+	 {
+		loadlinksFromLocalDb(); 
+		 }
+		else{
+			loadlinksfromserver(); 
+		}		 
+	 }
+*/	 
+	 
+function loadlinksFromLocalDb()
+{
+	//alert("loadupcominglinks LocalDb");
+	db.transaction(populatelinksDB, errorlinksCB, successlinksCB);
+	}	 
+
+function populatelinksDB(tx) {
+	//alert("loadupcominglinks FromLocalDb  sdfsa asedf asdf");
+tx.executeSql('CREATE TABLE IF NOT EXISTS links (id INTEGER PRIMARY KEY AUTOINCREMENT, links_id INTEGER , links TEXT NOT NULL , linkpage TEXT NOT NULL , status INTEGER )');
+}
+
+function successlinksCB() {
+	db.transaction(querylinksDB,errorlinksCB);
+}
+function querylinksDB(tx){
+	var value ='1';
+tx.executeSql('SELECT * FROM links where status=?',[value],querylinksSuccess,errorlinksCB);
+}
+
+
+function errorlinksCB(err){
+	
+	//alert("ERROR : "+err);
+	}
+
+function querylinksSuccess(tx,result){
+		var length = result.rows.length;
+		
+		
+	//	alert("links LENGTH  = "+ length);
+		
+		var linksappend='';
+			if(length >0)
+			{
+			
+	for(var i=0; i< length ; i++)
+	{
+			//alert(result.rows.item(i).newsurl);
+			
+		var links =	result.rows.item(i).links;
+		var	linkpage =result.rows.item(i).linkpage;
+		
+		//console.log("links ="+links+" datetime  "+linkpage );
+		
+		
+		//console.log(linkpage+' onclick '+links);
+		
+		
+		$('#'+linkpage).attr('onclick','loadurl(\''+links+'\')' );
+		
+/*		if(linkpage=='facebook')
+		{
+			$('#')
+			
+			}
+		else if(linkpage=='google')
+		{
+			
+			}
+		else if(linkpage=='instagram')
+		{
+
+
+			}
+		else if(linkpage=='twitter')	
+		{}
+		else if(linkpage=='youtube')	
+		{}
+		else if(linkpage=='aisclive')	
+		{}
+		else if(linkpage=='aiscgallery')	
+		{}
+		*/
+			
+				}// for close
+			
+			//alert("linksappend  "+linksappend);
+				
+			}//if close
+			else{
+				 if(navigator.network.connection.type == Connection.NONE){
+						navigator.notification.alert("No links available , Please turn on Data to sync contact", alertCallback, "AISC", "Done");
+				 }else{
+					loadlinksfromserver(); 
+					 }
+			}
+}
+
+
+
+
+function loadlinksfromserver()
+{
+	db.transaction(populatelinksDB, errorlinksCB, successlinksCBServer);
+}
+
+
+function successlinksCBServer(){
+	
+//	alert('adasda !!!!');
+	
+	//console.log(ajaxpath+'loadlinks.php?AppTokenId='+AppTokenId);
+		
+	$.support.cors = true;
+	$.ajax({
+	url:ajaxpath+'loadlinks.php?AppTokenId='+AppTokenId,
+	type:'POST',
+	contentType: "application/json",
+	async: true,
+	dataType: 'json',
+	crossDomain: true,
+	success: function(data)
+	{
+	
+	deletelinks_data();	
+//	alert('evennts loaded');
+	//	alert(data.status.code);
+			if(data.status.code=='100')
+			{
+		//		alert(data.Response);
+		//		alert('11');
+				var	Response = data.Response;
+		//		alert('14');
+
+			$.each(Response, function(index, element) {
+				db.transaction( function(tx){ insertlinksvalues(tx, element.links_id, element.links, element.linkpage, element.status )}, ErrorCallBack );	
+			});
+				loadlinksFromLocalDb();
+				
+		}else{
+				navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
+				}	
+	},
+	error: function(e)
+	{
+	   //navigator.notification.alert("System error 83014 links. Please try again in a couple of minutes.", alertCallback, "AISC", "Done");
+	}
+	});
+ }
+ 
+ 
+function ErrorCallBack(err){
+	//alert("ERROR 11 :"+err.message);
+}
+
+
+function insertlinksvalues(tx,parameter1,parameter2,parameter3,parameter4)
+{
+//	alert('122');
+//	alert(parameter1+'===='+parameter2+'======'+parameter3+'===='+parameter4);
+	tx.executeSql('INSERT INTO links( links_id, links ,linkpage ,status ) VALUES (?,?,?,?)',[parameter1,parameter2,parameter3,parameter4]);
+ }
+
+
+
+
+
+
+
+function deletelinks_data()
+{
+	//alert('aa');
+	
+	db.transaction(function(tx){
+				var value='0';
+				var cond='0';
+        		tx.executeSql("UPDATE links set status=? where id!=?;", [ value, cond ]); // array of values for the ? placeholders
+		},ErrordeletteCB);	 
+		
+	}
+	
+function ErrordeletteCB(err)
+{
+	//alert("Error event delete = "+err.message);
+	
+	} 	
+	
+function ErrordelteCB(err){
+	//alert("ErrordelteCB "+err.message);
+	
+	}
+
+function successSelectlinksCB(tx,result){
+	
+	//alert("Length of rows in table = "+ result.rows.length);
+		//alert(" Every ");
+	}
+
+
+  
+  
+  
+  function loadnotificationpage()
+  {
+		if(navigator.network.connection.type == Connection.NONE)
+		 {
+		   loadNotificationsFromLocalDb();
+		   }
+			else{
+			loadNotificationsfromserver();
+	}		 
+
+	  
+	  
+	  
+}
+  
+
+
+function savereadstatus()
+{
+	//console.log("save savereadstatus");
+	db.transaction(populateEventsDB, errorEventsCB , successEventReadstatusCB);
+	}
+function successEventReadstatusCB()
+{
+	
+	for(var i=0;i<EventCheckValues.length;i++)
+	{	
+	
+		strattransaction(EventCheckValues[i]);
+		
+		
+	}
+	
+	
+	for(var i=0;i<EventCheckValues.length;i++)
+	{
+		var g='event'+EventCheckValues[i];
+		
+		
+			$('#'+g+' img').toggle(function(){
+				
+					if($('#'+g+' input').is(':checked'))
+					{
+					  $('#'+g+' input').prop('checked', false);
+						}else{
+						$('#'+g+' input').prop('checked', false);	
+							}
+		});
+	
+
+		
+		}
+	
+ loadupcomingeventspage();	
+ }	
+
+
+function ErrorCallBackEventstatus(err){ 
+ }
+
+function strattransaction(value_1){
+	var value='1';
+db.transaction( function(tx){ updateEventStatus(tx,value_1,value) }, ErrorCallBackEventstatus );
+}
+
+function updateEventStatus(tx,parameter1,parameter2)
+{
+	//console.log(' upcomingevents update = '+parameter1);
+	tx.executeSql("UPDATE upcomingevents set readstatus=? where event_id=?", [parameter2,parameter1]);
+	}
+  
+  
+  
+function addeventcalendar()
+{
+	 EventCheckValues = $('#events_id input:checkbox:checked').map(function () {
+		  return this.value;
+		}).get(); // ["18", "55", "10"]
+
+	//console.log(EventCheckValues);
+	
+		
+		
+		//console.log(EventCheckValues);
+		
+		var event_length=EventCheckValues.length;
+			  
+			//  console.log(event_length);
+			 var event_success=0;
+			 var event_fail=0; 
+			 var errormessage='';
+			  
+			if(event_length > 0)
+			{
+				
+			for(var i=0; i< event_length ; i++)
+				{		
+						var event_id = EventCheckValues[i];
+					//	console.log("Event Id  = " + event_id);
+						var eventtitle = $('#event'+event_id).attr('data-value1');
+						var datetime = $('#event'+event_id).attr('data-value2');
+						var readstatus = $('#event'+event_id).attr('data-value3');
+						
+						//console.log("Event Id = "+event_id+"Event tittle" +eventtitle + "Date time = " + datetime +"Read status =  "+ readstatus );
+						currentEventId=event_id;
+						$('#event'+event_id).attr('style', 'background-color:#CCC !important');
+						
+						var datetime_array = datetime.split(' ');
+						var date_array = datetime_array[0].split('-');
+						var time_array = datetime_array[1].split(':');	
+						
+						// prep some variables
+						
+					//	alert(time_array[0]+'  '+time_array[1]);
+						var month=date_array[1];
+						
+						var endhour=parseInt(time_array[0]);
+						endhour=endhour + 1;
+					//	alert(endhour);
+	
+						
+					//	alert(date_array[2] +','+ (month-1) +','+date_array[0]+','+time_array[0]+','+time_array[1]+','+0+','+0+','+0);
+					//	alert(date_array[2] +','+ (month-1)+','+date_array[0]+','+time_array[0]+','+endhour+','+0+','+0+','+0);
+						
+						
+						var startDate = new Date(date_array[2],date_array[1]-1,date_array[0],time_array[0],time_array[1],0,0,0); // beware: month 0 = january, 11 = december
+						var endDate = new Date(date_array[2],date_array[1]-1,date_array[0],endhour,time_array[1],0,0,0);
+						var title = eventtitle;
+						var location = "";
+						var notes = "";
+						var success = function(message) { event_success =1; };
+						var error = function(message) { event_fail=1 ; errormessage=message };
+					//	alert(" startDate ="+startDate);
+					//	alert(" endDate ="+endDate);
+						
+						window.plugins.calendar.createEvent(title,location,notes,startDate,endDate,success,error);
+					
+					$('#event'+event_id).removeAttr('onclick');
+					
+					$('#event'+event_id).attr('onclick','alreadyadded()');
+					
+						
+				   }
+				   if(event_fail>0)
+				   {
+					  
+					  //navigator.notification.alert(message, alertCallback, "Calendar","Done");
+					  			$('#calendarMessage').html(message);
+								$('.calendarAlert').show();
+								setTimeout(function() { $(".calendarAlert").hide();  }, 3000);
+					   }else{
+					 // navigator.notification.alert(event_length+ " Event(s) added into your iPhone Calendar", alertCallback, "Calendar", "Done");	   
+					  
+							    $('#calendarMessage').html(event_length+ " Event(s) added into your iPhone Calendar");
+								$('.calendarAlert').show();
+								setTimeout(function() { $(".calendarAlert").hide(); }, 3000);
+								
+						   }
+				   
+				savereadstatus();
+				}
+				else{
+					
+								$('#calendarMessage').html("Please select atleast one Event");
+								$('.calendarAlert').show();
+								setTimeout(function() { $(".calendarAlert").hide(); }, 3000);
+								
+					//  navigator.notification.alert("", alertCallback, "Calendar", "Done");
+	//				  $('#calendarMessage').html(message);
+					  
+					}  
+			  
+			
+
+	
+	}  
+ function alreadyadded(){
+	//   navigator.notification.alert("Events already added into your iphone calendar", alertCallback, "Calendar", "Done");
+		$('#calendarMessage').html("Events already added into your iphone calendar");
+		$('.calendarAlert').show();
+		setTimeout(function() { $(".calendarAlert").hide(); }, 2000);
+	   
+	 }
+  
+  
+/*function gohomepage()
+{
+	$.mobile.changePage('#index',{ transition:'slide' ,  reverse:'true'  });
+	}
+	*/
+	
+function gotomail(emaillink)
+{
+	var mailid =[];
+	
+	mailid.push(emaillink);
+	
+window.plugins.socialsharing.shareViaEmail(
+  '', // can contain HTML tags, but support on Android is rather limited:  http://stackoverflow.com/questions/15136480/how-to-send-html-content-with-image-through-android-default-email-client
+  '',
+  mailid, // TO: must be null or an array
+  null, // CC: must be null or an array
+  null, // BCC: must be null or an array
+  null // FILES: can be null, a string, or an array
+		);					
+	   
+	
+	
+	}	
+	
+function loadpassword(){  db.transaction(populatePasswordDB, errorPasswordCB , successPasswordCB);}
+function populatePasswordDB(tx) {  tx.executeSql('CREATE TABLE IF NOT EXISTS password (id INTEGER PRIMARY KEY AUTOINCREMENT, passwords TEXT NOT NULL , status INTEGER )'); }
+function errorPasswordCB(err) { 	 }
+function successPasswordCB(){   db.transaction(querysuccessPasswordCB,errorPasswordCB); 	}
+function querysuccessPasswordCB(tx){  tx.executeSql('SELECT * FROM password',[],queryPasswordSuccess,errorPasswordCB); }
+function queryPasswordSuccess(tx,result)
+{
+  var length = result.rows.length;
+	// alert("Password Length"+length); 
+	if(length>0)
+	{
+		for(var i=0; i< length ; i++)
+		{
+		//	console.log(result.rows.item(i).passwords);
+			$('#getpassword').val(result.rows.item(i).passwords);	
+			paswordDbCount=1;	
+													if( $('#remember_me').is(':checked') )
+													{
+													
+													}else{
+													
+													$('#remember_me').trigger('click');
+													
+													}
+													
+			// console.log(paswordDbCount);
+			}
+	}else{
+	  paswordDbCount=0;
+	  
+	 // console.log(paswordDbCount);
+	  }
+}
+
+
+
+function savepassword()
+{
+	//console.log("save passwordss");
+	db.transaction(populatePasswordDB, errorPasswordCB , successPasswordInsertCB);
+	}
+function successPasswordInsertCB()
+{
+//	console.log(" successPasswordInsertCB = "+ $('#getpassword').val() );
+		var new_passwords = $('#getpassword').val();
+		var value='1';
+		db.transaction( function(tx){ insertpasswordvalues(tx,new_passwords,value) }, ErrorCallBackpass );
+ }	
+
+
+function ErrorCallBackpass(err){  }
+function insertpasswordvalues(tx,parameter1,parameter2)
+{
+
+	if(paswordDbCount>0)
+	{
+	//	console.log(' Password Insert = '+parameter1);
+		tx.executeSql("UPDATE password set passwords=? ", [parameter1]);
+	}else{
+		//console.log(' Password Insert = '+parameter1);
+		tx.executeSql('INSERT INTO password (passwords,status) VALUES (?,?)',[parameter1,parameter2]);
+		}
+	//loadpassword();
+	}
+
+
+$('#submitpass').on("touchstart",function(e){
+		$('#buttonsubmit').css("opacity","0.5");
+		})
+.on("touchmove",function(e){  })	
+.on("touchend",function(e){
+	$('#buttonsubmit').css("opacity","1.0");
+	checkuser();
+});	
+
+ 
+ function checkuser()
+ {
+	 var password = $('#getpassword').val();
+	// alert("Password = "+ password);
+ if(navigator.network.connection.type == Connection.NONE){
+		//console.log(' intrenet not working'); 	 
+	 navigator.notification.alert("Your phone does not currently have an intrenet connection. Please connect and try again.", alertCallback, "AISC", "OK"); 
+ }else{
+		//console.log(' password check ajax '); 
+	 if(password!='' && password!=null)
+	 {
+		 
+		
+			 savepassword();
+			 
+		 
+		 //console.log(ajaxpath+'newsletterpassword.php?AppTokenId='+AppTokenId+'&password='+password);
+						$.support.cors = true;
+						$.ajax({
+						url:ajaxpath+'newsletterpassword.php?AppTokenId='+AppTokenId+'&password='+password,
+						type:'POST',
+						contentType: "application/json",
+						async: true,
+						dataType: 'json',
+						crossDomain: true,
+						success: function(data)
+						{
+						
+								if(data.status.code=='100')
+								{
+									loadNewsletterfromserver();
+								var	Response = data.Response;
+								
+							//	alert("Response===="+Response.passwordStatus);
+								
+								if(Response.passwordStatus=='success')
+								{
+									$.mobile.changePage('#newsletterloggedin',{ transition:'slide' }); 
+	    						  }
+								else{
+									navigator.notification.alert("Password Incorrect", alertCallback, "AISC", "OK");
+									}	
+									
+									
+									}else{
+									navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
+							}	
+						},
+						error: function(e)
+						{
+						  // //navigator.notification.alert("System error 83014 password. Please try again in a couple of minutes.", alertCallback, "AISC", "Done");
+						}
+						});
+
+		 
+		 
+		 }else{
+				navigator.notification.alert("Please enter the password", alertCallback, "AISC", "OK"); 
+			 }
+			 
+			 
+      }
+	 
+} 
+ 
+
+
+
+        var iabRef = null;
+	    function iabLoadStart(event) {
+        }
+	   function iabLoadStop(event) {
+		}
+        function iabClose(event) {
+          iabRef.removeEventListener('loadstart', iabLoadStart);
+          iabRef.removeEventListener('loadstop', iabLoadStop);
+          iabRef.removeEventListener('exit', iabClose);
+          iabRef.removeEventListener('share', iabClose);
+		  iabRef.close();
+        }
+        function iabShare(event){
+        }
+        function loadurl(url_link){
+			
+		//	alert(url_link);
+if(navigator.network.connection.type == Connection.NONE)
+	{
+		navigator.notification.alert("Your phone does not currently have an intrenet connection. Please connect and try again.", alertCallback, "Alert!", "OK"); 
+		
+		}
+		else{
+			
+			//alert('urrl  = '+ url_link);
+			iabRef = window.open(url_link, '_blank','toolbarposition=bottom,location=no,presentationstyle=formsheet,closebuttoncaption=Close');//presentationstyle: Set to pagesheet, formsheet or fullscreen 
+			
+						$.support.cors = true;
+			iabRef.addEventListener('exit', iabClose);
+            iabRef.addEventListener('share', iabShare);
+            iabRef.addEventListener('loadstart', iabLoadStart);
+            iabRef.addEventListener('loadstop', iabLoadStop);
+
+			
+			}
+			
+			
+        }
+		
+	function alertCallback(){
+}	
+function browser_setting()
+	{	
+        $(document).bind( 'mobileinit', function(){
+		
+                         $.mobile.loader.prototype.options.text ="";
+                         $.mobile.loader.prototype.options.textVisible = false;
+                         $.mobile.loader.prototype.options.theme ="d";
+                         $.mobile.loader.prototype.options.textonly = false;
+                         $.mobile.loader.prototype.options.html ="<img src='../loader.png'/>";
+                         $.mobile.allowCrossDomainPages = true;
+                        });
+	}
+
+
+
+function triggercheckbox()
+{
+	 if( $('#remember_me').is(':checked') )
+	 {
+		 
+		 $('#remember_me').trigger('click');
+		 
+	 }else{
+	
+		 $('#remember_me').trigger('click');
+		 
+		 }
+	
+	}
+
+
+
+function addcalenderdata(g)
+{
+	$('#'+g.id+' img').toggle(function(){
+				
+					if($('#'+g.id+' input').is(':checked'))
+					{
+					  $('#'+g.id+' input').prop('checked', false);
+						}else{
+							
+						$('#'+g.id+' input').prop('checked', true);
+							}
+		});
+	
+	
+	}
+
+function test()
+{
+	
+
+	}	
+	
+
+
+</script>
+</body>
+</html>

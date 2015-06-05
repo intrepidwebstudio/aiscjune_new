@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+.bacolor{
+	background-color: !important; 
+	color:white !important;
+	}
+
+
+.slideimage{
+	width:100% !important;
+	height:255px !important;
+	margin-top:15px !important;
+	}
+.mainimage{
+	width:100%;
+	height:68px;
+	}
+
+.indexcontent1{
+	width:60%; 
+	float:left;
+	background-color:#336699;
+	color:white;
+	min-height:70px;
+	}
+
+
+.size{
+	color:white;
+	text-align:center;
+	}
+
+
+
+.settingvalue{
+	font-family: !important;
+	font-size:22px !important;
+	}	
+	
+.eventtop{
+	width:100%; 
+	float:left;
+	background-color:#38549B;
+	color:white; 
+	min-height:60px;
+	}
+.eventtopimage1{
+	margin-top:10px;
+	width:43%;
+	margin-left:6px;
+	}
+.eventtoptext{
+	margin-top:-35px;
+	margin-left:51px;
+	}
+.eventtopimage2{
+	
+	margin-left: -6px;
+    margin-top: 10px;
+    width: 96%;
+	}
+.eventcontenttop{
+	margin-left:-16px;
+	margin-right:-16px;
+	text-align:center;
+	margin-top:-5px;
+	}
+
+.socialmediaheader{
+	width:100%;
+	float:left;
+	background-color:#38549B;
+	color:white;
+	min-height:44px;
+	}
+.socialmediamain{
+	width:100%;
+	height:-1px;
+	}
+
+.socialmediaimage{
+	width:100%;
+	height:53px;
+	margin-top:5px;
+	margin-left:7px;
+	padding:1px;
+	background-color:#FFF;
+	border-radius:10px;
+	}
+.socialfacebook{
+	float:right; 
+	margin-right:58px;
+	color:white;
+	font-size:24px;
+	}
+.socialgoogleplus{
+	float:right; 
+	margin-right:77px;
+	color:white;
+	font-size:24px;
+	}
+.socialinstagram{
+	float:right; 
+	margin-right:60px;
+	color:white;
+	font-size:24px;
+	}
+.socialtwitter{
+	float:right; 
+	margin-right:98px;
+	color:white;
+	font-size:24px;
+	}
+.socialyoutube{
+	float:right; 
+	margin-right:81px;
+	color:white;
+	font-size:24px;
+	}
+.newletterheader{
+	width:100%;
+	float:left;
+	background-color:#38549B;
+	color:white; 
+	min-height:44px;
+	}	
+.newsletterheaderimage{
+	margin-top:10px;
+	width:35%;
+	margin-left:6px;
+	}	
+.newsletterheadertext1{
+	margin-top:-27px;
+	margin-left:34px;
+	}	
+.newsletterheadertext2{
+	float:right;
+	margin-right:80px;
+	margin-top:10px;
+	font-size:22px;
+	}	
+	
+	
+.examplecolor{
+	background: rgb(204,204,204); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(204,204,204,1) 22%, rgba(238,238,238,1) 89%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(22%,rgba(204,204,204,1)), color-stop(89%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(204,204,204,1) 22%,rgba(238,238,238,1) 89%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(204,204,204,1) 22%,rgba(238,238,238,1) 89%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(204,204,204,1) 22%,rgba(238,238,238,1) 89%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(204,204,204,1) 22%,rgba(238,238,238,1) 89%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
