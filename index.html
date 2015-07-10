@@ -1497,13 +1497,15 @@ var db = window.openDatabase("aisc", "1.0", "aisc user local Database", 200000);
 var paswordDbCount=0;
 
 
-function bannertable(){  db.transaction(populateBannerDB, errorBannerCB , successBannerCB);}
-function populateBannerDB(tx) {  tx.executeSql('CREATE TABLE IF NOT EXISTS banner (id INTEGER PRIMARY KEY AUTOINCREMENT, banner_id INTEGER , order_id INTEGER , imagepath TEXT NOT NULL  , status INTEGER )'); }
-function errorBannerCB(err) { 	 }
-function successBannerCB(){   db.transaction(querysuccessBannerCB,errorBannerCB); 	}
-function querysuccessBannerCB(tx){  tx.executeSql('SELECT * FROM banner order by order_id where status=?',[1],queryBannerSuccess,errorBannerCB); }
+function bannertable(){ console.log('bannertable');   db.transaction(populateBannerDB, errorBannerCB , successBannerCB);}
+function populateBannerDB(tx) { console.log('Populate bannertable'); tx.executeSql('CREATE TABLE IF NOT EXISTS banner (id INTEGER PRIMARY KEY AUTOINCREMENT, banner_id INTEGER , order_id INTEGER , imagepath TEXT NOT NULL  , status INTEGER )'); }
+function errorBannerCB(err) { 	console.log('Error bannertable'); }
+function successBannerCB(){ console.log('successCB bannertable');   db.transaction(querysuccessBannerCB,errorBannerCB); 	}
+function querysuccessBannerCB(tx){ console.log( 'Query succes banner');  tx.executeSql('SELECT * FROM banner order by order_id where status=?',[1],queryBannerSuccess,errorBannerCB); }
 function queryBannerSuccess(tx,result)
 {
+	console.log('banner result');
+	
   var length = result.rows.length;
 	// alert("Password Length"+length); 
 		for(var i=0; i< length ; i++)
@@ -1523,7 +1525,7 @@ function queryBannerSuccess(tx,result)
 
 function callbannerfromserver()
 {
-//	alert('sss');
+	alert('sss');
 var screenwidth=window.screen.width;
 var screenheight=window.screen.height;
 
@@ -1587,8 +1589,6 @@ var src_array=[];
 					downloadFile(element.imagepath,element.banner_id,element.order_id);
 					
 				});
-				
-				
 			
 		}else{
 			navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
@@ -1603,10 +1603,6 @@ var src_array=[];
 		});
 
 	
-	}
-	
-function errorContactCB(err){
-	alert("ERROR : "+err);
 	}
 	
 
