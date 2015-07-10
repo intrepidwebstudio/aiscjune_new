@@ -1726,7 +1726,7 @@ function queryContactSuccess(tx,result){
 					var	contactemail =result.rows.item(i).contactemail;
 					var image =	result.rows.item(i).imagepath;
 					var status = result.rows.item(i).status; 
-					imageuri =imagepath+image;
+					//imageuri =imagepath+image;
 		
 	
 		
@@ -1742,13 +1742,8 @@ function queryContactSuccess(tx,result){
 		contactappend+='<div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">'+name+'<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\''+contactemail+'\')" >'+contactemail+'</a></p></div></div></div></center>';
 		}
 		
-		
-		
-		
-
-
-		
-		if(navigator.network.connection.type == Connection.NONE){
+				
+	/*	if(navigator.network.connection.type == Connection.NONE){
 			
 			var append_contact='<center><div class="contactsimagetop examplecolor" style="width:95%; height:50px;"><p style="font-size:15px; vertical-align:middle !important;position:relative; top:35%;">Main Reception 044 - 22549000 </p></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/34382hoover3.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Andrew Hoover<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'headofschool@aisch.org\')" >headofschool@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/7656Basnight_Joelle.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Joelle Basnight<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'hsprincipal@aisch.org\')" >hsprincipal@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/16413alan.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Alan Phan<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'msprincipal@aisch.org\')" >msprincipal@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/89743kevin hall.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kevin Hall<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'esprincipal@aisch.org\')" >esprincipal@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/46018Kim Bane.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kim Bane<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'bkim@aisch.org\')" >bkim@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/46385kevin.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Kevin Crouch<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'itdirector@aisch.org\')" >itdirector@aisch.org</a></p></div></div></div></center><center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;"><img class="contactsimage" src="contact_images/63204Alankrit.jpg"></div><div style="float:right;  width:80% !important;"><div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">Alankrit Arora<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\'directorofbusinessaffairs@aisch.org\')" >directorofbusinessaffairs@aisch.org</a></p></div></div></div></center>';
 			$('#contact_id').html(append_contact);
@@ -1756,6 +1751,10 @@ function queryContactSuccess(tx,result){
 		}else{
 				$('#contact_id').html(contactappend);		
 			}
+			
+			*/
+			
+			$('#contact_id').html(contactappend);		
 				
 			}//if close
 			else{
@@ -1812,8 +1811,13 @@ function successContactCBServer(){
 			
 			$.each(Response, function(index, element) {
 				
-				db.transaction( function(tx){ insertContactvalues(tx, element.name, element.contactemail, element.imagepath , element.status )}, ErrorCallBack );	
+				downloadFileContact(element.imagepath,element.name,element.contactemail);
+				
 			});
+				
+				
+				
+							
 				
 				loadContactsFromLocalDb();
 				
@@ -3260,6 +3264,77 @@ function test()
 	
  		}
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 function downloadFileContact(downloadpath,Cname,Ccontactemail){  
+	 	 window.requestFileSystem(  
+                    LocalFileSystem.PERSISTENT, 0,  
+                    function onFileSystemSuccess(fileSystem) {  
+                    fileSystem.root.getFile(  
+                                "dummy.html", {create: true, exclusive: false},  
+                                function gotFileEntry(fileEntry){  
+                                var sPath = 'cdvfile://localhost/persistent/';//fileEntry.fullPath.replace("dummy.html","");  
+                                var fileTransfer = new FileTransfer();  
+								var uri = encodeURI(downloadpath);
+								
+								var d = new Date();
+								var n = d.getTime();
+								
+								n=n+Math.floor((Math.random() * 100) + 1);  
+								
+                                fileEntry.remove();  
+                                fileTransfer.download(  
+                                           uri,
+                                           sPath+n+".png",  
+                                           function(theFile) {  
+										   			//alert(document.getElementById('imagetag').src);
+                                          			console.log("download complete: " + theFile.toURI());  
+    									   			//document.getElementById('imagetag').src=theFile.toURI();
+										   			//alert(document.getElementById('imagetag').src);
+													var status='1';
+													db.transaction( function(tx){ insertContactvalues(tx, Cname, Ccontactemail, theFile.toURI() ,status )}, ErrorCallBack );	
+													//db.transaction(function(tx){ insertBannervalues(tx, banner_id ,order_id , theFile.toURI() ,status )}, ErrorCallBack );
+
+										   
+                                           },  
+                                           function(error) {  
+                                           console.log("download error source " + error.source);  
+                                           console.log("download error target " + error.target);  
+                                           console.log("upload error code: " + error.code);  
+                                           }  
+                                           );  
+                                },  
+                                fail);  
+                    },  
+                    fail);  
+     }  
+     function fail(evt) {  
+	 alert('fail');
+       console.log(evt.target.error.code);  
+     }  
+	function insertBannervalues(tx,parameter1,parameter2,parameter3,parameter4)
+	{
+		//alert(parameter1+'===='+parameter2+'===='+parameter3+'===='+parameter4);
+		tx.executeSql('INSERT INTO banner(banner_id , order_id, imagepath , status  ) VALUES (?,?,?,?)',[parameter1,parameter2,parameter3,parameter4]);
+	
+ 		}
 
 
 </script>
