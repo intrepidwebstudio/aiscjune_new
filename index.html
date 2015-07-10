@@ -1501,7 +1501,7 @@ function bannertable(){ console.log('bannertable');   db.transaction(populateBan
 function populateBannerDB(tx) { console.log('Populate bannertable'); tx.executeSql('CREATE TABLE IF NOT EXISTS banner (id INTEGER PRIMARY KEY AUTOINCREMENT, banner_id INTEGER , order_id INTEGER , imagepath TEXT NOT NULL  , status INTEGER )'); }
 function errorBannerCB(err) { 	console.log('Error bannertable'); }
 function successBannerCB(){ console.log('successCB bannertable');   db.transaction(querysuccessBannerCB,errorBannerCB); 	}
-function querysuccessBannerCB(tx){ console.log( 'Query succes banner'); var value='1'; tx.executeSql('SELECT * FROM banner order by order_id where status=?',[value],queryBannerSuccess,errorBannerCB); }
+function querysuccessBannerCB(tx){ console.log( 'Query succes banner'); var value='1'; tx.executeSql('SELECT * FROM banner where status=? order by order_id ',[value],queryBannerSuccess,errorBannerCB); }
 function queryBannerSuccess(tx,result)
 {
 	console.log('banner result');
