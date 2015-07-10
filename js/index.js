@@ -217,7 +217,7 @@ var app = {
            		
 				loadNotificationsfromserver();
 				loadEventsfromserver();
-			//	loadcontactsfromserver(); 
+				loadcontactsfromserver(); 
 				loadlinksfromserver(); 
 				//loadNewsletterfromserver();
 				//console.log('connectin server');

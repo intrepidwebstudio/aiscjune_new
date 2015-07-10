@@ -3221,7 +3221,9 @@ function test()
                                 var sPath = 'cdvfile://localhost/persistent/';//fileEntry.fullPath.replace("dummy.html","");  
                                 var fileTransfer = new FileTransfer();  
 								var uri = encodeURI(downloadpath);
-								
+								var newpath =   downloadpath.split('.');
+								 newpath.reverse();
+								var extenstionvalue=newpath[0];
 								var d = new Date();
 								var n = d.getTime();
 								
@@ -3230,7 +3232,7 @@ function test()
                                 fileEntry.remove();  
                                 fileTransfer.download(  
                                            uri,
-                                           sPath+n+".png",  
+                                           sPath+n+extenstionvalue,  
                                            function(theFile) {  
 										   			//alert(document.getElementById('imagetag').src);
                                           			console.log("download complete: " + theFile.toURI());  
@@ -3293,7 +3295,9 @@ function test()
                                 var sPath = 'cdvfile://localhost/persistent/';//fileEntry.fullPath.replace("dummy.html","");  
                                 var fileTransfer = new FileTransfer();  
 								var uri = encodeURI(downloadpath);
-								
+								var newpath =   downloadpath.split('.');
+								 newpath.reverse();
+								var extenstionvalue=newpath[0];
 								var d = new Date();
 								var n = d.getTime();
 								
@@ -3302,7 +3306,7 @@ function test()
                                 fileEntry.remove();  
                                 fileTransfer.download(  
                                            uri,
-                                           sPath+n+".png",  
+                                           sPath+n+extenstionvalue,  
                                            function(theFile) {  
 										   			//alert(document.getElementById('imagetag').src);
                                           			console.log("download complete: " + theFile.toURI());  
