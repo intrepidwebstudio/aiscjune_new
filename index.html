@@ -26,10 +26,6 @@
 
 
 <style>
-
-
-
-
 		.example-wrapper, .example-wrapper div.iscroll-scroller {
 		width: 100% !important;
 		}
@@ -1450,12 +1446,7 @@ element.style {
 <script type="text/javascript" src="js/googlescript.js"></script>
 
 <script>
-
-
-
-
-
-    // You can also use "$(window).load(function() {"
+// You can also use "$(window).load(function() {"
 //	GLOBAL VALUES
 
 /*$(function(){
@@ -1488,20 +1479,46 @@ $('.backbutton12').on("touchstart",function(e){
 
 
 var AppTokenId='abcdefghijklmnopqrstuvwxyz';
-var ajaxpath = 'http://www.safelearners.com/aisc/appajax/';
-var imagepath ='http://www.safelearners.com/aisc/';
+//var ajaxpath = 'http://www.safelearners.com/aisc/appajax/';
+//var imagepath ='http://www.safelearners.com/aisc/';
+var ajaxpath = 'http://192.168.1.56/aisc/appajax/';
+var imagepath ='http://192.168.1.56/aisc/';
 var event_read_array=[];
 var event_read_list='';
 var imageuri;
 var total_notificationcount=0;	
 var newtotal_notificationcount=0;	
 var currentEventId=0;
-
+var globalimgarray=[];
 var EventCheckValues='';
 
 var db = window.openDatabase("aisc", "1.0", "aisc user local Database", 200000); //will create database Dummy_DB or open it		
 
 var paswordDbCount=0;
+
+
+function bannertable(){  db.transaction(populateBannerDB, errorBannerCB , successBannerCB);}
+function populateBannerDB(tx) {  tx.executeSql('CREATE TABLE IF NOT EXISTS banner (id INTEGER PRIMARY KEY AUTOINCREMENT, banner_id INTEGER , order_id INTEGER , imagepath TEXT NOT NULL  , status INTEGER )'); }
+function errorBannerCB(err) { 	 }
+function successBannerCB(){   db.transaction(querysuccessBannerCB,errorBannerCB); 	}
+function querysuccessBannerCB(tx){  tx.executeSql('SELECT * FROM banner order by order_id where status=?',[1],queryBannerSuccess,errorBannerCB); }
+function queryBannerSuccess(tx,result)
+{
+  var length = result.rows.length;
+	// alert("Password Length"+length); 
+		for(var i=0; i< length ; i++)
+		{
+			globalimgarray.push(result.rows.item(i).imagepath);	
+			}
+			
+	if(navigator.network.connection.type == Connection.NONE)
+	{
+		callbanner();
+		}else{
+			callbannerfromserver();
+			}		
+}
+
 
 
 function callbannerfromserver()
@@ -1512,6 +1529,7 @@ var screenheight=window.screen.height;
 
 var phonemodel=''; 
 var banner='';
+var src_array=[];
 		if(screenwidth == 320 && screenheight == 480)
 		{
 		phonemodel='4s';
@@ -1539,14 +1557,18 @@ var banner='';
 		//		alert(data.status.code);
 		if(data.status.code=='100')
 		{
-		//	alert(data.Response);
-		//		alert('11');
 			var	Response = data.Response;
-		//		alert('14');
-		
-		$.each(Response, function(index, element) {
-					banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="'+imagepath+element.imageurl+'" ></li>';
+			$.each(Response, function(index, element) {
+					
+					src_array.push({"imagepath":imagepath+element.imageurl , "banner_id":element.banner_id , "order_id":element.order_id });
+			banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="'+imagepath+element.imageurl+'" ></li>';
 		});
+			
+		db.transaction(function(tx){ 
+				var value='0';	var cond='0';
+				tx.executeSql("UPDATE banner set status=? where id!=?;", [ value, cond ]); // array of values for the ? placeholders
+		},ErrordeletteCB);	
+			
 			
 		if(banner!='')
 		{					
@@ -1560,10 +1582,19 @@ var banner='';
 		}
 			
 
+			$.each(src_array,function(index,element){
+				
+					downloadFile(element.imagepath,element.banner_id,element.order_id);
+					
+				});
+				
+				
 			
 		}else{
 			navigator.notification.alert("Network problem , please try after sometime !!", alertCallback, "AISC", "OK");
 			}	
+		
+		
 		},
 		error: function(e)
 		{
@@ -1573,14 +1604,20 @@ var banner='';
 
 	
 	}
+	
+function errorContactCB(err){
+	alert("ERROR : "+err);
+	}
+	
 
   
-  function callbanner()
-  {
+function callbanner()
+{
 var banner='';
 var screenwidth=window.screen.width;
 var screenheight=window.screen.height;
-if(screenwidth == 320 && screenheight == 480)
+
+/*if(screenwidth == 320 && screenheight == 480)
 {
   banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/4s/1.png" ></li>';
   banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/4s/2.png" ></li>';
@@ -1602,6 +1639,16 @@ if(screenwidth == 320 && screenheight == 480)
   banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6p/3.png" ></li>';
   banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="banner/6p/4.png" ></li>';
 	}
+  */
+  
+  
+  for(var k=0; k<globalimgarray.length; k++)
+  {
+	  
+	banner+='<li class="sliderres"><img style="width:100%; height:100%;"  src="'+globalimgarray[k]+'" ></li>';  
+	  
+	  }
+  
   
 if(banner!='')
 {
@@ -3160,6 +3207,62 @@ function test()
 	
 
 	}	
+	
+	
+	
+	
+	 function downloadFile(downloadpath,banner_id,order_id){  
+	 	 window.requestFileSystem(  
+                    LocalFileSystem.PERSISTENT, 0,  
+                    function onFileSystemSuccess(fileSystem) {  
+                    fileSystem.root.getFile(  
+                                "dummy.html", {create: true, exclusive: false},  
+                                function gotFileEntry(fileEntry){  
+                                var sPath = 'cdvfile://localhost/persistent/';//fileEntry.fullPath.replace("dummy.html","");  
+                                var fileTransfer = new FileTransfer();  
+								var uri = encodeURI(downloadpath);
+								
+								var d = new Date();
+								var n = d.getTime();
+								
+								n = n + banner_id; 
+								
+                                fileEntry.remove();  
+                                fileTransfer.download(  
+                                           uri,
+                                           sPath+n+".png",  
+                                           function(theFile) {  
+										   			//alert(document.getElementById('imagetag').src);
+                                          			console.log("download complete: " + theFile.toURI());  
+    									   			//document.getElementById('imagetag').src=theFile.toURI();
+										   			//alert(document.getElementById('imagetag').src);
+													var status='1';
+													
+													db.transaction(function(tx){ insertBannervalues(tx, banner_id ,order_id , theFile.toURI() ,status )}, ErrorCallBack );
+
+										   
+                                           },  
+                                           function(error) {  
+                                           console.log("download error source " + error.source);  
+                                           console.log("download error target " + error.target);  
+                                           console.log("upload error code: " + error.code);  
+                                           }  
+                                           );  
+                                },  
+                                fail);  
+                    },  
+                    fail);  
+     }  
+     function fail(evt) {  
+	 alert('fail');
+       console.log(evt.target.error.code);  
+     }  
+	function insertBannervalues(tx,parameter1,parameter2,parameter3,parameter4)
+	{
+		//alert(parameter1+'===='+parameter2+'===='+parameter3+'===='+parameter4);
+		tx.executeSql('INSERT INTO banner(banner_id , order_id, imagepath , status  ) VALUES (?,?,?,?)',[parameter1,parameter2,parameter3,parameter4]);
+	
+ 		}
 	
 
 
