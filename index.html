@@ -1525,7 +1525,7 @@ function queryBannerSuccess(tx,result)
 
 function callbannerfromserver()
 {
-	alert('sss');
+//	alert('sss');
 var screenwidth=window.screen.width;
 var screenheight=window.screen.height;
 
@@ -1572,17 +1572,17 @@ var src_array=[];
 		},ErrordeletteCB);	
 			
 			
-		if(banner!='')
-		{					
-			$('#slider1').html('');
-			$('#slider1').html(banner);
+			if(banner!='')
+			{
 			
-			 $("#slider1").responsiveSlides({
-				maxwidth: 800,
-				speed: 800
-			  });
-		}
-			
+				$('#slider1').html('');
+				$('#slider1').html(banner);
+				
+				 $("#slider1").responsiveSlides({
+					maxwidth: 800,
+					speed: 800
+				  });
+				}			
 
 			$.each(src_array,function(index,element){
 				
