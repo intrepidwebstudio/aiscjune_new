@@ -208,7 +208,7 @@ var app = {
 		
             if(navigator.network.connection.type == Connection.NONE){
             //  callbanner(); 
-			loadContactsFromLocalDb
+			loadContactsFromLocalDb();
 			  loadNotificationsFromLocalDb();
 			  loadEventsFromLocalDb();
 			//  loadContactsFromLocalDb();
