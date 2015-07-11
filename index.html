@@ -3243,7 +3243,7 @@ function test()
 										   			//alert(document.getElementById('imagetag').src);
 													var status='1';
 													
-													db.transaction(function(tx){ insertBannervalues(tx, banner_id ,order_id , theFile.toURL() ,status )}, ErrorCallBack );
+													db.transaction(function(tx){ insertBannervalues(tx, banner_id ,order_id , theFile.toURI() ,status )}, ErrorCallBack );
 
 										   
                                            },  
@@ -3316,7 +3316,7 @@ function test()
     									   			//document.getElementById('imagetag').src=theFile.toURI();
 										   			//alert(document.getElementById('imagetag').src);
 													var status='1';
-													db.transaction( function(tx){ insertContactvalues(tx, Cname, Ccontactemail, theFile.toURL() ,status )}, ErrorCallBack );	
+													db.transaction( function(tx){ insertContactvalues(tx, Cname, Ccontactemail, theFile.toURI() ,status )}, ErrorCallBack );	
 													//db.transaction(function(tx){ insertBannervalues(tx, banner_id ,order_id , theFile.toURI() ,status )}, ErrorCallBack );
 
 										   
