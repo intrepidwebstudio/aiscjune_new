@@ -1734,11 +1734,11 @@ function queryContactSuccess(tx,result){
 		
 					contactappend+='<center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;">';
 		
-			if((image=='') || (navigator.network.connection.type == Connection.NONE) ){
+			if(image==''){
 				//image = '';
 				contactappend+='<img class="contactsimage" src="img/noimageicon.png">';
 			}else{
-				contactappend+='<img class="contactsimage" src="'+imagepath+image+'">';		
+				contactappend+='<img class="contactsimage" src="'+image+'">';		
 				}
 		contactappend+='</div><div style="float:right;  width:80% !important;">';
 		contactappend+='<div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">'+name+'<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\''+contactemail+'\')" >'+contactemail+'</a></p></div></div></div></center>';
@@ -3238,19 +3238,19 @@ function test()
                                            sPath+n+'.'+extenstionvalue,  
                                            function(theFile) {  
 										   			//alert(document.getElementById('imagetag').src);
-                                          			console.log("download complete: " + theFile.toURI());  
+                                          			//console.log("download complete: " + theFile.toURL());  
     									   			//document.getElementById('imagetag').src=theFile.toURI();
 										   			//alert(document.getElementById('imagetag').src);
 													var status='1';
 													
-													db.transaction(function(tx){ insertBannervalues(tx, banner_id ,order_id , theFile.toURI() ,status )}, ErrorCallBack );
+													db.transaction(function(tx){ insertBannervalues(tx, banner_id ,order_id , theFile.toURL() ,status )}, ErrorCallBack );
 
 										   
                                            },  
                                            function(error) {  
-                                           console.log("download error source " + error.source);  
-                                           console.log("download error target " + error.target);  
-                                           console.log("upload error code: " + error.code);  
+                                         //  console.log("download error source " + error.source);  
+                                         //  console.log("download error target " + error.target);  
+                                         //  console.log("upload error code: " + error.code);  
                                            }  
                                            );  
                                 },  
@@ -3259,8 +3259,8 @@ function test()
                     fail);  
      }  
      function fail(evt) {  
-	 alert('fail');
-       console.log(evt.target.error.code);  
+	// alert('fail');
+      // console.log(evt.target.error.code);  
      }  
 	function insertBannervalues(tx,parameter1,parameter2,parameter3,parameter4)
 	{
@@ -3312,19 +3312,19 @@ function test()
                                            sPath+n+'.'+extenstionvalue,  
                                            function(theFile) {  
 										   			//alert(document.getElementById('imagetag').src);
-                                          			console.log("download complete: " + theFile.toURI());  
+                                          		//	console.log("download complete: " + theFile.toURL());  
     									   			//document.getElementById('imagetag').src=theFile.toURI();
 										   			//alert(document.getElementById('imagetag').src);
 													var status='1';
-													db.transaction( function(tx){ insertContactvalues(tx, Cname, Ccontactemail, theFile.toURI() ,status )}, ErrorCallBack );	
+													db.transaction( function(tx){ insertContactvalues(tx, Cname, Ccontactemail, theFile.toURL() ,status )}, ErrorCallBack );	
 													//db.transaction(function(tx){ insertBannervalues(tx, banner_id ,order_id , theFile.toURI() ,status )}, ErrorCallBack );
 
 										   
                                            },  
                                            function(error) {  
-                                           console.log("download error source " + error.source);  
-                                           console.log("download error target " + error.target);  
-                                           console.log("upload error code: " + error.code);  
+                                      //     console.log("download error source " + error.source);  
+                                     //      console.log("download error target " + error.target);  
+                                     //      console.log("upload error code: " + error.code);  
                                            }  
                                            );  
                                 },  
@@ -3332,16 +3332,6 @@ function test()
                     },  
                     fail);  
      }  
-     function fail(evt) {  
-	 alert('fail');
-       console.log(evt.target.error.code);  
-     }  
-	function insertBannervalues(tx,parameter1,parameter2,parameter3,parameter4)
-	{
-		//alert(parameter1+'===='+parameter2+'===='+parameter3+'===='+parameter4);
-		tx.executeSql('INSERT INTO banner(banner_id , order_id, imagepath , status  ) VALUES (?,?,?,?)',[parameter1,parameter2,parameter3,parameter4]);
-	
- 		}
 
 
 </script>
