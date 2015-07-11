@@ -1738,8 +1738,7 @@ function queryContactSuccess(tx,result){
 				//image = '';
 				contactappend+='<img class="contactsimage" src="img/noimageicon.png">';
 			}else{
-				console.log(image);
-				contactappend+='<img class="contactsimage" src="'+image+'">';		
+				contactappend+='<img class="contactsimage" src="'+imagepath+image+'">';		
 				}
 		contactappend+='</div><div style="float:right;  width:80% !important;">';
 		contactappend+='<div><p style="font-size:15px; vertical-align:middle !important; text-align:center !important">'+name+'<br /><a style="text-decoration:none !important; color:#000 !important;  font-weight:normal ; " onclick="gotomail(\''+contactemail+'\')" >'+contactemail+'</a></p></div></div></div></center>';
@@ -1758,7 +1757,6 @@ function queryContactSuccess(tx,result){
 			*/
 			
 			$('#contact_id').html(contactappend);		
-			console.log(contactappend);
 				
 			}//if close
 			else{
@@ -1813,10 +1811,9 @@ function successContactCBServer(){
 				var	Response = data.Response;
 		//		alert('14');
 			
-			$.each(Response, function(index, element){
-				var downloadpath=imagepath+element.imagepath;
-				console.log('path : '+downloadpath);
-				downloadFileContact(downloadpath,element.name,element.contactemail);
+			$.each(Response, function(index, element) {
+				
+				downloadFileContact(element.imagepath,element.name,element.contactemail);
 				
 			});
 				
