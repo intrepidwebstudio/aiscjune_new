@@ -208,16 +208,18 @@ var app = {
 		
             if(navigator.network.connection.type == Connection.NONE){
             //  callbanner(); 
+			loadContactsFromLocalDb
 			  loadNotificationsFromLocalDb();
 			  loadEventsFromLocalDb();
 			//  loadContactsFromLocalDb();
 			  loadlinksFromLocalDb(); 
+			  
 			  loadNewsletterFromLocalDb(); 
             }else{
            		
 				loadNotificationsfromserver();
 				loadEventsfromserver();
-				loadcontactsfromserver(); 
+				loadcontactsfromserver();
 				loadlinksfromserver(); 
 				//loadNewsletterfromserver();
 				//console.log('connectin server');
@@ -226,6 +228,7 @@ var app = {
 				//$('#mapid').html(mapid1);    
 				
             }
+			 
 			browser_setting();
 			loadpassword();
 			

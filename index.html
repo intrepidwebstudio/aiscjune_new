@@ -1734,7 +1734,7 @@ function queryContactSuccess(tx,result){
 		
 					contactappend+='<center><div class="contactsimagetop examplecolor" style="width:95%;"><div style="float:left; width:20% !important;">';
 		
-			if((image=='') || (navigator.network.connection.type == Connection.NONE) ){
+			if(image=='' ){
 				//image = '';
 				contactappend+='<img class="contactsimage" src="img/noimageicon.png">';
 			}else{
@@ -1791,7 +1791,10 @@ function ErrorDeleteCallBack(err){
 	} 
 function successContactCBServer(){
 //	alert('adasda !!!!');
-	
+
+
+if(navigator.network.connection.type != Connection.NONE)	
+{
 	$.support.cors = true;
 	$.ajax({
 	url:ajaxpath+'loadcontacts.php?AppTokenId='+AppTokenId,
@@ -1819,11 +1822,7 @@ function successContactCBServer(){
 				downloadFileContact(downloadpath,element.name,element.contactemail);
 				
 			});
-				
-				
-				
-							
-				
+								
 				loadContactsFromLocalDb();
 				
 		}else{
@@ -1832,9 +1831,16 @@ function successContactCBServer(){
 	},
 	error: function(e)
 	{
+		loadContactsFromLocalDb();
 	   //navigator.notification.alert("System error 83014  contact . Please try again in a couple of minutes.", alertCallback, "AISC", "Done");
 	}
 	});
+}
+else{
+	loadContactsFromLocalDb();
+	
+	}	
+	
 	
  }
  
