@@ -1811,9 +1811,10 @@ function successContactCBServer(){
 				var	Response = data.Response;
 		//		alert('14');
 			
-			$.each(Response, function(index, element) {
+			$.each(Response, function(index, element){
+				var downloadpath=imagepath+element.imagepath;
 				
-				downloadFileContact(element.imagepath,element.name,element.contactemail);
+				downloadFileContact(downloadpath,element.name,element.contactemail);
 				
 			});
 				
