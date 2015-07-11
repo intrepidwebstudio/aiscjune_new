@@ -1481,10 +1481,10 @@ $('.backbutton12').on("touchstart",function(e){
 
 
 var AppTokenId='abcdefghijklmnopqrstuvwxyz';
-//var ajaxpath = 'http://www.safelearners.com/aisc/appajax/';
-//var imagepath ='http://www.safelearners.com/aisc/';
-var ajaxpath = 'http://192.168.1.56/aisc/appajax/';
-var imagepath ='http://192.168.1.56/aisc/';
+var ajaxpath = 'http://www.intrepidwebstudio.in/aisc/appajax/';
+var imagepath ='http://www.intrepidwebstudio.in/aisc/';
+//var ajaxpath = 'http://192.168.1.56/aisc/appajax/';
+//var imagepath ='http://192.168.1.56/aisc/';
 var event_read_array=[];
 var event_read_list='';
 var imageuri;
@@ -1499,15 +1499,13 @@ var db = window.openDatabase("aisc", "1.0", "aisc user local Database", 200000);
 var paswordDbCount=0;
 
 
-function bannertable(){ console.log('bannertable');   db.transaction(populateBannerDB, errorBannerCB , successBannerCB);}
-function populateBannerDB(tx) { console.log('Populate bannertable'); tx.executeSql('CREATE TABLE IF NOT EXISTS banner (id INTEGER PRIMARY KEY AUTOINCREMENT, banner_id INTEGER , order_id INTEGER , imagepath TEXT NOT NULL  , status INTEGER )'); }
+function bannertable(){    db.transaction(populateBannerDB, errorBannerCB , successBannerCB);}
+function populateBannerDB(tx) {  tx.executeSql('CREATE TABLE IF NOT EXISTS banner (id INTEGER PRIMARY KEY AUTOINCREMENT, banner_id INTEGER , order_id INTEGER , imagepath TEXT NOT NULL  , status INTEGER )'); }
 function errorBannerCB(err) { 	console.log('Error bannertable'); }
-function successBannerCB(){ console.log('successCB bannertable');   db.transaction(querysuccessBannerCB,errorBannerCB); 	}
-function querysuccessBannerCB(tx){ console.log( 'Query succes banner'); var value='1'; tx.executeSql('SELECT * FROM banner where status=? order by order_id ',[value],queryBannerSuccess,errorBannerCB); }
+function successBannerCB(){  db.transaction(querysuccessBannerCB,errorBannerCB); 	}
+function querysuccessBannerCB(tx){  var value='1'; tx.executeSql('SELECT * FROM banner where status=? order by order_id ',[value],queryBannerSuccess,errorBannerCB); }
 function queryBannerSuccess(tx,result)
 {
-	console.log('banner result');
-	
   var length = result.rows.length;
 	// alert("Password Length"+length); 
 		for(var i=0; i< length ; i++)
@@ -1818,7 +1816,7 @@ if(navigator.network.connection.type != Connection.NONE)
 			
 			$.each(Response, function(index, element){
 				var downloadpath=imagepath+element.imagepath;
-				console.log('path : '+downloadpath);
+
 				downloadFileContact(downloadpath,element.name,element.contactemail);
 				
 			});
