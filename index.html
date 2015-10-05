@@ -1785,9 +1785,6 @@ if(navigator.network.connection.type != Connection.NONE)
 	crossDomain: true,
 	success: function(data)
 	{
-		console.log("step 44");
-		 
-	
 		
 //		alert(data.status.code);
 			if(data.status.code=='100')
@@ -1797,7 +1794,7 @@ if(navigator.network.connection.type != Connection.NONE)
 		//		alert('11');
 				var	Response = data.Response;
 		//		alert('14');
-			alert(Response.length);
+			//alert(Response.length);
 			$.each(Response, function(index, element){
 				var downloadpath=imagepath+element.imagepath;
 
@@ -1819,7 +1816,7 @@ if(navigator.network.connection.type != Connection.NONE)
 	});
 }
 else{
-	console.log("step 666");
+	
 	loadContactsFromLocalDb();
 	
 	}	
@@ -3319,7 +3316,7 @@ function test()
                     },  
                     fail);
 					
-					console.log("step 55");  
+				
      }  
     
 
