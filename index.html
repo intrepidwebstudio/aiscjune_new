@@ -1762,7 +1762,7 @@ function deletedata(tx){
 	
 		var value='0';
 		var cond='0';
-        tx.executeSql("UPDATE contacts set status=? where id!=?;", [ value, cond ]); // array of values for the ? placeholders
+        tx.executeSql("TRUNCATE contacts "); // array of values for the ? placeholders
 	}
 
 function ErrorDeleteCallBack(err){
