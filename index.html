@@ -1657,23 +1657,22 @@ if(banner!='')
 function loadContactsFromLocalDb()
 {                            
 	//alert("loadContacsFromLocalDb");
-	console.log("step 1");
 	db.transaction(populateContactDB, errorContactCB, successContactCB);
 	}	 
 
 function populateContactDB(tx) {
 	//alert("loadContacsFromLocalDb  sdfsa asedf asdf");
-	console.log("step 2");
+	
 tx.executeSql('CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL , contactemail TEXT NOT NULL ,order_id INTEGER, imagepath TEXT NOT NULL  , status INTEGER )');
 }
 
 function successContactCB() {
-	console.log("step 3");
+	
 	db.transaction(queryContactDB,errorContactCB);
 }
 function queryContactDB(tx){
 	var value = '1';
-	console.log("step 4");
+	
 tx.executeSql('SELECT * FROM contacts where status=? order by order_id ',[value],queryContactSuccess,errorContactCB);
 }
 
@@ -1685,13 +1684,13 @@ function errorContactCB(err){
 function queryContactSuccess(tx,result){
 	
 	
-	console.log("step 5");
+	
 		var length = result.rows.length;
 //		alert('length');
 		var contactappend='';
 			if(length >0)
 			{
-				console.log("step 6");
+				
 				
 			$('#contact_id').html('');	
 			
@@ -1744,7 +1743,7 @@ function queryContactSuccess(tx,result){
 				 if(navigator.network.connection.type == Connection.NONE){
 						navigator.notification.alert("Your phone does not currently have an internet connection. Please connect and try again", alertCallback, "Alert !", "OK");
 				 }else{
-					 console.log("step 11");
+					 
 					loadcontactsfromserver(); 
 					 }
 			}
@@ -1752,7 +1751,7 @@ function queryContactSuccess(tx,result){
 
 function loadcontactsfromserver()
 {
-	console.log("step 22");
+	
 	//alert("loadContacsFromserver  populate");
 	db.transaction(populateContactDB, errorContactCB, successContactCBServer);
 }
@@ -1773,7 +1772,6 @@ function ErrorDeleteCallBack(err){
 	} 
 function successContactCBServer(){
 //	alert('adasda !!!!');
-console.log("step 33");
 
 if(navigator.network.connection.type != Connection.NONE)	
 {
@@ -1789,25 +1787,26 @@ if(navigator.network.connection.type != Connection.NONE)
 	{
 		console.log("step 44");
 		 
-	db.transaction( function(tx){ deletedata(tx) }, ErrorDeleteCallBack );	
+	
 		
 //		alert(data.status.code);
 			if(data.status.code=='100')
 			{
+				db.transaction( function(tx){ deletedata(tx) }, ErrorDeleteCallBack );	
 			//	alert(data.Response);
 		//		alert('11');
 				var	Response = data.Response;
 		//		alert('14');
-			
+			alert(Response.length);
 			$.each(Response, function(index, element){
 				var downloadpath=imagepath+element.imagepath;
 
 				downloadFileContact(downloadpath,element.name,element.contactemail,element.order_id);
 				
 			});
-						console.log("step 55");		
-				loadContactsFromLocalDb();
-				console.log("step 66");
+					
+			//	loadContactsFromLocalDb();
+			
 		}else{
 				navigator.notification.alert("Your phone does not currently have an internet connection. Please connect and try again", alertCallback, "Alert !", "OK");
 				}	
@@ -1830,7 +1829,7 @@ else{
  
  
 function ErrorCallBack(err){
-	//alert("ERROR :"+err);
+	 //alert("ERROR :"+err);
 }
 
 
@@ -1839,6 +1838,8 @@ function insertContactvalues(tx,parameter1,parameter2,parameter3,parameter4,para
 {
 	//alert(parameter1+'===='+parameter2+'===='+parameter3+'===='+parameter4);
 	tx.executeSql('INSERT INTO contacts(name , contactemail , order_id,imagepath , status  ) VALUES (?,?,?,?,?)',[parameter1,parameter2,parameter3,parameter4,parameter5]);
+	
+	loadContactsFromLocalDb();
  }
 
 
