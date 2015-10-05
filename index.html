@@ -1762,7 +1762,9 @@ function deletedata(tx){
 	
 		var value='0';
 		var cond='0';
-        tx.executeSql("TRUNCATE contacts "); // array of values for the ? placeholders
+        tx.executeSql("DROP TABLE contacts "); // array of values for the ? placeholders
+		tx.executeSql('CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL , contactemail TEXT NOT NULL ,order_id INTEGER, imagepath TEXT NOT NULL  , status INTEGER )');
+		
 	}
 
 function ErrorDeleteCallBack(err){
