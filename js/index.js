@@ -265,6 +265,7 @@ function resumeappcallCB(){
  * Google Maps documentation: http://code.google.com/apis/maps/documentation/javascript/basics.html
  * Geolocation documentation: http://dev.w3.org/geo/api/spec-source.html
  */
+ /*
 $( document ).on( "pageinit", "#locateuss", function() {
     var defaultLatLng = new google.maps.LatLng(12.982186,80.246433);  // Default to Hollywood, CA when no geolocation support
         drawMap(defaultLatLng);  // No geolocation support, show default map
@@ -284,7 +285,7 @@ $( document ).on( "pageinit", "#locateuss", function() {
         });
     }
 });
-
+*/
 function savedeviceid(deviceid){
 	
 	
